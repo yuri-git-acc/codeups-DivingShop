@@ -14,4 +14,15 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <header class=""></header>
+    <header class="header">
+        <div class="header__logo">
+            <img src="" alt="ロゴ">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#" class="header__nav-link">ナビゲーション1</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">ナビゲーション2</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">ナビゲーション3</a></li>
+            </ul>
+        </nav>
+    </header>

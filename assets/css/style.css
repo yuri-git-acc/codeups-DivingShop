@@ -140,7 +140,87 @@ select::-ms-expand {
   display: none;
 }
 
-.page__title {
-  font-size: 50px;
+.top {
+  padding: 50px 0;
+}
+
+.top__img-wrapper {
+  padding: 32px 0;
+  margin-top: 48px;
+  background-color: #e0e0e0;
+}
+
+.top__post {
+  padding: 32px 0;
+}
+
+.top__tab-list {
+  margin-top: 24px;
+}
+
+.header {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0e0e0;
+}
+
+.header__logo {
+  /* ロゴのスタイル */
+}
+
+.header__nav {
+  /* ナビゲーション全体のスタイル */
+}
+
+.header__nav-list {
+  display: flex;
+}
+
+.header__nav-item + .header__nav-item {
+  margin-left: 32px;
+}
+
+.header__nav-link {
   color: #000;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 48px;
+  width: 100%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+}
+
+.tab {
+  display: flex;
+}
+
+.tab__link + .tab__link {
+  margin-left: 24px;
+}
+
+.tab__link {
+  display: block;
+  color: #000;
+  padding: 4px 12px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.tab__link.is-active {
+  background-color: #000;
+  color: #fff;
 }
