@@ -1,0 +1,6 @@
+@use "global" as *;
+
+//スクロールしないように
+body.noscroll {
+    overflow: hidden;
+}

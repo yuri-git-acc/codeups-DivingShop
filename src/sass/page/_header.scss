@@ -1,0 +1,105 @@
+@use "global" as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: rem(80);
+    background-color: rgba($color: #0D2936, $alpha: 0.68);
+    z-index: 999;
+}
+
+.header__inner {
+    padding-inline: rem(15);
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    width: rem(102);
+    z-index: 9999;
+}
+
+.header__logo img {
+    aspect-ratio: 102 / 38;
+    object-fit: cover;
+    height: auto;
+}
+
+.header__logo path {
+    fill: $white;
+}
+
+.header__nav {
+    height: inherit;
+    display: none;
+    @include mq("md"){
+        display: block;
+        margin-right: rem(5);
+    }
+}
+
+.header__list {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    gap: rem(5);
+}
+
+.header__item {
+    height: inherit;
+}
+
+.header__link {
+    height: inherit;
+    color: $white;
+    text-align: center;
+    padding-inline: rem(15);
+    display:grid;
+    place-content:center;
+    position: relative;
+}
+
+.header__link::after {
+    position: absolute;
+    bottom: rem(17);
+    left: 0;
+    content: "";
+    width: calc(100% - rem(15) * 2);
+    height: 1px;
+    background: $white;
+    transform: scaleX(0);
+    transition: transform .3s;
+    margin-inline: rem(15);
+}
+@media (hover:hover) {
+    .header__link:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+.header__link-main {
+    font-family: $second-font-family;
+    font-size: 18px;
+    line-height: 1;
+    font-size: min(calc(18 / 880 * 100vw), rem(18));
+}
+
+.header__link-sub {
+    font-size: rem(10);
+    line-height: calc(15 / 10);
+    margin-top: rem(4);
+    display: block;
+}
+
+.header__hamburger {
+    height: inherit;
+    display: flex;
+    align-items: center;
+        @include mq("md"){
+        display: none;
+    }
+}

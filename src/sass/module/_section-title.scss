@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.section-title {
+  text-align: center;
+}
+
+.section-title__main {
+  font-size:  rem(32);
+  font-family: $second-font-family;
+  line-height: calc(40 / 32);
+  color: $font;
+  font-weight: $normal;
+  @include mq("md"){
+    font-size:  rem(40);
+  }
+}
+.section-title__main::first-letter {
+  color: $main;
+}
+
+.section-title__sub {
+  font-size:  rem(12);
+  line-height: calc(18 / 12);
+  color: $main;
+  margin-top: rem(4);
+  font-weight: $normal;
+}
+
+
+.section-title__main--contact {
+  font-size: rem(80);
+  line-height: 1;
+}
+
+.section-title__sub--contact {
+  margin-top: rem(-5);
+}
