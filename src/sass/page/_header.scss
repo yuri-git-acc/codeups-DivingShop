@@ -8,6 +8,9 @@
     height: rem(80);
     background-color: rgba($color: #0D2936, $alpha: 0.68);
     z-index: 999;
+    @include mq("md"){
+        height: rem(90);
+    }
 }
 
 .header__inner {
@@ -16,17 +19,27 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include mq("md"){
+        padding-left: rem(40);
+        padding-right: rem(26);
+    }
 }
 
 .header__logo {
     width: rem(102);
     z-index: 9999;
+    @include mq("md"){
+        width: rem(133);
+    }
 }
 
 .header__logo img {
     aspect-ratio: 102 / 38;
     object-fit: cover;
     height: auto;
+    @include mq("md"){
+        aspect-ratio: 133 / 50;
+    }
 }
 
 .header__logo path {
@@ -38,15 +51,18 @@
     display: none;
     @include mq("md"){
         display: block;
-        margin-right: rem(5);
+        // margin-right: rem(5);
     }
 }
 
 .header__list {
-    height: inherit;
-    display: flex;
-    align-items: center;
-    gap: rem(5);
+    @include mq("md"){
+        height: inherit;
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        padding-bottom: rem(1);
+    }
 }
 
 .header__item {

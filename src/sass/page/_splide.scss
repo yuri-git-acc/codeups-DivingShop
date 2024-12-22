@@ -1,5 +1,6 @@
 @use "global" as *;
 
+// mv
 .splide__img {
     height: 100vh;
     height: 100svh;
@@ -13,4 +14,9 @@
     @include mq("md"){
         aspect-ratio: 1440 / 768;
     }
+}
+
+// campaign
+.splide__card {
+    padding-bottom: rem(20);
 }

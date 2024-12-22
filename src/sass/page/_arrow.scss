@@ -1,0 +1,69 @@
+@use "global" as *;
+
+/* 矢印のクリック範囲 */
+.arrow-button {
+    display: none;
+    @include mq("md"){
+        background-color: transparent;
+        height: rem(80);
+        transition: .2s;
+        width: rem(80);
+        display: grid;
+        place-content: center;
+        top: rem(-66);
+    }
+}
+.arrow-button.prev {
+    left: calc(50% + ((300 / 1440)* 100vw));
+}
+.arrow-button.next {
+    left: calc(50% + ((460 / 1440)* 100vw));
+
+}
+.arrow-button::before {
+    content: "";
+    width: rem(80);
+    height: rem(80);
+    border: 1px solid $main;
+    border-radius: 50%;
+}
+
+.arrow-button__tip {
+    width: rem(40);
+    height: rem(1);
+    background-color: $main;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.arrow-button__tip::after {
+    content: "";
+    display: block;
+    width: rem(10);
+    height: rem(1);
+    background-color: $main;
+    position: absolute;
+}
+
+.arrow-button__tip--prev::after  {
+    left: rem(-1);
+    top: rem(-3);
+    rotate: -40deg;
+}
+.arrow-button__tip--next::after  {
+    right: rem(-1);
+    top: rem(-3);
+    rotate: 40deg;
+}
+
+/* 次のスライドが無い場合の矢印 */
+.arrow-button:disabled,
+.arrow-button.is-disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.3;
+}
+.arrow-button:disabled .arrow-button__tip {
+    cursor: default;
+}
