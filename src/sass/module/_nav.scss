@@ -19,23 +19,36 @@
     grid-template-areas:
     "menu1 menu3"
     "menu2 menu4";
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: repeat(2, rem(171));
+    grid-template-rows: repeat(2, auto);
     column-gap: rem(7);
     justify-content: center;
     @include mq("md"){
         grid-template-areas: unset;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, auto);
         grid-template-rows: unset;
+        justify-content: start;
+        column-gap:  calc((113.5 / 1080) * 100%);
     }
 }
 
 .nav__items:nth-child(2n) {
-    margin-top: rem(26);
+    margin-top: rem(20);
     @include mq("md"){
         margin-top: unset;
     }
 }
+// spのヘッダーメニューの時の位置
+.header__sp-nav .nav__items:nth-child(3),
+.header__sp-nav .nav__items:nth-child(4) {
+    margin-left: rem(-5);
+}
+// footerの時の位置
+.footer__nav .nav__items:nth-child(3),
+.footer__nav .nav__items:nth-child(4) {
+    margin-left: rem(6);
+}
+
 .nav__items-1 {
     grid-area: menu1;
     @include mq("md"){
@@ -78,7 +91,7 @@
     position: relative;
 }
 .nav__items a:not(:first-child) .nav__item--icon {
-    margin-top: rem(16);
+    margin-top: rem(20);
 }
 .nav__item--icon::before {
     content: "";
@@ -87,9 +100,8 @@
 
     width: rem(18);
     height: rem(18);
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
+    top: rem(10);
+    left: rem(2);
 }
 
 // humburgerメニューopen時

@@ -1,0 +1,113 @@
+@use "global" as *;
+
+.top-price {
+    background-color: $bg
+}
+
+.top-price__contents {
+    margin-top: rem(28);
+    @include mq("md"){
+        margin-top: rem(39);
+        display: grid;
+        grid-template-columns: rem(494) rem(492);
+        grid-template-areas: "price bg";
+        gap: rem(92);
+    }
+}
+
+.top-price__img {
+    width:  100%;
+    height: auto;
+}
+
+.top-price__img img {
+    aspect-ratio: 345 / 227;
+    object-fit: cover;
+    height: auto;
+    @include mq("md"){
+        aspect-ratio: 492 / 746;
+    }
+}
+
+.top-price__main {
+    margin-top: rem(40);
+    @include mq("md"){
+        grid-area: price;
+        margin-top: unset;
+        padding-bottom: calc((93 / 1080) * 100%);
+    }
+}
+
+.top-price__item + .top-price__item {
+    margin-top: rem(39);
+}
+
+.top-price__title {
+    font-weight: $bold;
+    line-height: calc(24 / 16);
+    border-bottom: 1px solid $main;
+    padding-bottom: rem(4);
+}
+
+.top-price__list {
+    width:  100%;
+    border-collapse:collapse;
+}
+
+.top-price__list tr {
+    display: grid;
+    grid-template-columns: auto rem(70);
+    gap: rem(10);
+    justify-content: space-between;
+    margin-top: rem(6);
+}
+
+.top-price__list th,
+.top-price__list td {
+    font-size: rem(14);
+    line-height: calc(24 / 14);
+    font-weight: $normal;
+    @include mq("md"){
+        font-size: rem(16);
+        line-height: calc(24 / 16);
+    }
+}
+
+.top-price__list th {
+    margin-right: auto;
+    text-align: left;
+}
+
+.top-price__list td {
+    margin-left: auto;
+}
+
+.top-price__btn {
+    margin-top: rem(39);
+    margin-right: rem(3);
+    text-align: center;
+    @include mq("md"){
+        margin-top: rem(80);
+    }
+}
+
+.top-price__arrangement {
+    @include mq("md"){
+        margin-inline: auto;
+        position: relative;
+        max-width: rem(1280);
+    }
+}
+
+.top-price__arrangement::after {
+    @include mq("md"){
+        position: absolute;
+        content: '';
+        width:  rem(437);
+        width: calc((437 / 1280)* 100%);
+        height:  rem(201);
+        top: rem(-23);
+        left: rem(20);
+        background: url(../../assets/images/common/fish_green_pic.webp) left top /contain no-repeat;
+    }
+}

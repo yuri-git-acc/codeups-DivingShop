@@ -1,10 +1,10 @@
 @use "global" as *;
 
 .card {
-    padding-bottom: rem(18);
+    padding-bottom: rem(21);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     @include mq("md"){
-        padding-bottom: rem(34);
+        padding-bottom: rem(36);
     }
 }
 
@@ -60,14 +60,13 @@
 }
 
 .card__price {
-    margin-top: rem(11);
+    margin-top: rem(6);
     display: flex;
     justify-content: center;
     align-items: baseline;
-    font-family: $second-font-family;
     @include mq("md"){
-        margin-top: rem(9);
-        margin-left: calc((35 / 333) * 100%);
+        margin-top: rem(4);
+        margin-left: calc((36 / 333) * 100%);
         justify-content: start;
     }
 }
@@ -78,7 +77,7 @@
     position: relative;
     letter-spacing: -0.05em;
     @include mq("md"){
-        font-size: min(24px, calc(24 / 1400 * 100vw));
+        font-size: min(rem(24), calc(24 / 1400 * 100vw));
     }
 }
 
@@ -90,19 +89,19 @@
     background-color: #C94800;
     position: absolute;
     top: 50%;
-    transform: translateY(calc(-50% - 3px));
+    transform: translateY(-50%);
     left: 0;
 }
 
 .card__price-sale {
-    margin-left: rem(16);
+    margin-left: rem(24);
     font-size:  rem(32);
     font-weight: $bold;
     line-height: 1;
     color: $main;
     letter-spacing: -0.06em;
     @include mq("md"){
-        margin-left: rem(24);
-        font-size: min(40px, calc(40 / 1400 * 100vw));
+        margin-left: rem(32);
+        font-size: min(rem(40), calc(40 / 1400 * 100vw));
     }
 }

@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.top-voice__header-arrangement {
+    @include mq("md"){
+        margin-inline: auto;
+        position: relative;
+        max-width: rem(1280);
+    }
+}
+
+.top-voice__header-arrangement::after {
+    @include mq("md"){
+        position: absolute;
+        content: '';
+        width:  rem(301);
+        height:  rem(138);
+        top: rem(-115);
+        left: rem(20);
+        background: url(../../assets/images/common/fish_green_pic.webp) left top /contain no-repeat;
+        scale: -1 1;
+    }
+}
+
+.top-voice__cards {
+    margin-top: rem(44);
+    @include mq("md"){
+        margin-top: rem(29);
+    }
+}
+
+.top-voice__btn {
+    margin-top: rem(39);
+    margin-right: rem(3);
+    text-align: center;
+    @include mq("md"){
+        margin-top: rem(80);
+    }
+}
+
+.top-voice__bottom-arrangement {
+    @include mq("md"){
+        margin-inline: auto;
+        position: relative;
+        max-width: rem(1120);
+    }
+}
+
+.top-voice__bottom-arrangement::after {
+    @include mq("md"){
+        position: absolute;
+        content: '';
+        width:  rem(71);
+        height:  rem(162);
+        bottom: rem(-71);
+        right: rem(20);
+        background: url(../../assets/images/common/dragon_pic.webp) left top /contain no-repeat;
+    }
+}

@@ -6,6 +6,9 @@
 
 .inner.footer__inner {
     padding-inline: rem(14);
+    @include mq("md"){
+        padding-inline: rem(23);
+    }
 }
 
 .footer__head {
@@ -16,7 +19,8 @@
     margin-inline: auto;
     @include mq("md"){
         flex-direction: row;
-        gap: rem(40);
+        gap: rem(35);
+        margin-left: rem(2);
     }
 }
 
@@ -38,22 +42,25 @@
     gap: rem(18.25);
     align-items: center;
     @include mq("md"){
-        gap: rem(19);
-        margin-top: rem(38);
+        gap: rem(6);
+        margin-top: rem(33);
+        align-items: start;
     }
 }
 
 .footer__sns--facebook {
     width: rem(25);
     @include mq("md"){
-        width: rem(26);
+        width: rem(42);
+        padding: rem(8);
     }
 }
 
 .footer__sns--instagram {
     width: rem(20);
     @include mq("md"){
-        width: rem(26);
+        width: rem(42);
+        padding: rem(8);
     }
 }
 
@@ -70,9 +77,9 @@
 }
 
 .footer__nav {
-    margin-top: rem(40);
+    margin-top: rem(29);
     @include mq("md"){
-        margin-top: rem(24);
+        margin-top: rem(14);
     }
 }
 
@@ -81,13 +88,12 @@
     line-height: calc(18 / 12);
     color: $white;
     font-family: $second-font-family;
-    margin-top: 40px;
-    letter-spacing: -0.03em;
+    margin-top: rem(30);
     display: block;
     text-align: center;
     @include mq("md"){
         font-size: rem(14);
         line-height: calc(18 / 14);
-        margin-top: rem(80);
+        margin-top: rem(70);
     }
 }
