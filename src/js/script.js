@@ -2,10 +2,19 @@
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
     // ハンバーガーメニュー ------------------------------------
+    $(function () {
     $(".js-hamburger").click(function () {
         $(this).toggleClass("js-open");
         $(".js-sp-nav").toggleClass("js-open");
         $("body").toggleClass("noscroll");
+    });
+
+    // リンククリック時にメニューを閉じる処理
+    $(".js-sp-nav a").click(function () {
+        $(".js-hamburger").removeClass("js-open"); // ハンバーガーアイコンの状態をリセット
+        $(".js-sp-nav").removeClass("js-open");   // メニューを非表示に
+        $("body").removeClass("noscroll");        // スクロールロックを解除
+        });
     });
 
     // MVアニメーション ------------------------------------

@@ -29,6 +29,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    width:  100%;
 }
 .active .mv__left,
 .active .mv__right {
@@ -70,6 +71,7 @@
     object-fit: cover;
     width:  100%;
     height: 100%;
+    object-position: bottom;
     @include mq("md"){
         aspect-ratio: 1440 / 768;
     }
