@@ -18,7 +18,7 @@
 }
 
 .top-about__main {
-    padding-top:  calc((212 / 375) * 100vw);
+    padding-top:  calc((212 / 345) * 100%);
     @include mq("md"){
         display: grid;
         grid-template-columns: repeat(2, rem(400));
