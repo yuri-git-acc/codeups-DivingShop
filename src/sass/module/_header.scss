@@ -78,6 +78,10 @@
     position: relative;
 }
 
+.header__link:hover {
+    opacity: 1;
+}
+
 .header__link::after {
     position: absolute;
     bottom: rem(17);
@@ -121,4 +125,7 @@
 
 .header__sp-nav {
     padding-inline: rem(13);
+    @include mq("md"){
+        display: none;
+    }
 }

@@ -11,7 +11,7 @@
         content: "";
         width:  100%;
         height: rem(500);
-        background-image: url(../../assets/images/blog/blog_top_bg.webp);
+        background-image: url(../images/blog/blog_top_bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top center;
@@ -34,7 +34,7 @@
         height:  rem(201);
         top: rem(-71);
         left: rem(20);
-        background: url(../../assets/images/common/fish_white_pic.webp) left top /contain no-repeat;
+        background: url(../images/common/fish_white_pic.webp) left top /contain no-repeat;
     }
 }
 
@@ -49,7 +49,7 @@
     margin-top: rem(28);
     display: grid;
     grid-template-columns: 1fr;
-    gap: rem(39);
+    column-gap: rem(39);
     @include mq("md"){
         margin-top: rem(79);
         grid-template-columns: repeat(3, 1fr);

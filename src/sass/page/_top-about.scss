@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .top-about__container {
-    background-image: url(../../assets/images/aboutus/aboutUs_02.webp), url(../../assets/images/aboutus/aboutUs_01.webp);
+    background-image: url(../images/aboutus/aboutUs_02.webp), url(../images/aboutus/aboutUs_01.webp);
     background-position: left top, 100% rem(26);
     background-repeat: no-repeat, no-repeat;
     background-size: calc((128 / 345) * 100%), calc((281 / 345) * 100%);
@@ -79,6 +79,6 @@
         height:  rem(181);
         right: rem(20);
         bottom: rem(-90);
-        background: url(../../assets/images/common/aboutUs_pic.webp) right bottom /contain no-repeat;
+        background: url(../images/common/aboutUs_pic.webp) right bottom /contain no-repeat;
     }
 }

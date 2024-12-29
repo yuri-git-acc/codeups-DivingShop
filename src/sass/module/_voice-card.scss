@@ -11,6 +11,11 @@
     }
 }
 
+.voice-card:nth-child(n+3) {
+    @include mq("md"){
+        margin-top: rem(80);
+    }
+}
 .voice-card__head {
     display: grid;
     grid-template-columns:  calc((149 / 313) * 100%) calc((151 / 313) * 100%);

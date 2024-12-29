@@ -3,6 +3,8 @@
 .card {
     padding-bottom: rem(21);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
     @include mq("md"){
         padding-bottom: rem(36);
     }
@@ -33,6 +35,8 @@
     padding: rem(3) rem(11);
     display: inline-block;
     margin-top: rem(16);
+    display: flex;
+    align-self: start;
     @include mq("md"){
         padding: rem(5) rem(15);
         margin-top: rem(24);
@@ -45,6 +49,8 @@
     border-bottom: 1px solid $main;
     margin-top: rem(4);
     padding-bottom: rem(7);
+    display: flex;
+    flex-grow: 1;
 }
 
 .card__text {

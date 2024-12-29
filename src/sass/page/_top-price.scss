@@ -10,8 +10,9 @@
         margin-top: rem(39);
         display: grid;
         grid-template-columns: rem(494) rem(492);
+        grid-template-columns:  calc((494 / 1080) * 100%) calc((492 / 1080) * 100%);
         grid-template-areas: "price bg";
-        gap: rem(92);
+        gap: calc((92 / 1080) * 100%);
     }
 }
 
@@ -108,6 +109,6 @@
         height:  rem(201);
         top: rem(-23);
         left: rem(20);
-        background: url(../../assets/images/common/fish_green_pic.webp) left top /contain no-repeat;
+        background: url(../images/common/fish_green_pic.webp) left top /contain no-repeat;
     }
 }

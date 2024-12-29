@@ -14,11 +14,10 @@
     }
 }
 .arrow-button.prev {
-    left: calc(50% + ((300 / 1440)* 100vw));
+    left: 0;
 }
 .arrow-button.next {
-    left: calc(50% + ((460 / 1440)* 100vw));
-
+    left: rem(160);
 }
 .arrow-button::before {
     content: "";

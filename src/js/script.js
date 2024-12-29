@@ -9,6 +9,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $("body").toggleClass("noscroll");
     });
 
+    // ハンバーガーメニューリサイズで閉じる
+    $(window).on('resize', function() {
+    $('.js-hamburger').removeClass('js-open');
+    $('.js-sp-nav').removeClass('js-open');
+    $("body").removeClass("noscroll");
+    });
+
     // リンククリック時にメニューを閉じる処理
     $(".js-sp-nav a").click(function () {
         $(".js-hamburger").removeClass("js-open"); // ハンバーガーアイコンの状態をリセット

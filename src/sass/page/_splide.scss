@@ -20,4 +20,11 @@
 // campaign
 .splide__card {
     padding-bottom: rem(20);
+    display: flex;
+}
+
+.splide__arrows {
+    position: absolute;
+    top: 0;
+    left: calc(50% + ((300 / 1440)* 100vw));
 }
