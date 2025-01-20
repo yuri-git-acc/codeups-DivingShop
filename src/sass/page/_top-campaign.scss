@@ -1,13 +1,23 @@
 @use "global" as *;
 
+.inner.top-campaign__inner {
+    padding-inline: 0;
+}
 .top-campaign__slider {
     margin-top: rem(28);
+    margin-right: calc(50% - 50vw);
+    max-width: 100vw;
     @include mq("md"){
         margin-top: rem(39);
         position: relative;
     }
 }
 
+.top-campaign__slide-track {
+    // padding-left: max(25px,calc((100% - 1080px) / 2)) !important;
+    padding-left: 25px;
+    padding-right: min(25px,calc(100% - (1080px / 2)));
+}
 .top-campaign__btn {
     margin-top: rem(20);
     margin-right: rem(3);

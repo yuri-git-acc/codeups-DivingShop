@@ -81,14 +81,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(calc(-50% + rem(10)), calc(-50% + rem(2)));
+    transform: translate(calc(-50%), calc(-50%));
     color: $main;
     text-align: center;
     font-family: $second-font-family;
     z-index: 5;
-    @include mq("md"){
-        transform: translate(calc(-50% + rem(22)), calc(-50% + rem(10)));
-    }
 }
 
 .mv__copy--after {
@@ -98,6 +95,7 @@
 .mv__copy-main {
     font-size: rem(40);
     letter-spacing: 0.52em;
+    text-indent: 0.52em;
     line-height: 1;
     @include mq("md"){
         font-size: rem(80);
@@ -107,10 +105,6 @@
 .mv__copy-sub {
     font-size: rem(20);
     margin-top: rem(3);
-    margin-right: rem(24);
-    @include mq("md"){
-        margin-right: rem(45);
-    }
 }
 
 .mv__loading-bg {

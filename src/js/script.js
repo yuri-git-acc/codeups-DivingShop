@@ -4,6 +4,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     // ハンバーガーメニュー ------------------------------------
     $(function () {
     $(".js-hamburger").click(function () {
+        $(".js-header").toggleClass("js-open");
         $(this).toggleClass("js-open");
         $(".js-sp-nav").toggleClass("js-open");
         $("body").toggleClass("noscroll");
@@ -11,6 +12,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
     // ハンバーガーメニューリサイズで閉じる
     $(window).on('resize', function() {
+    $(".js-header").removeClass("js-open");
     $('.js-hamburger').removeClass('js-open');
     $('.js-sp-nav').removeClass('js-open');
     $("body").removeClass("noscroll");
@@ -78,8 +80,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         const campaignSplide = new Splide('.js-splide-campaign', {
             arrows: true,
             pagination: false,
+            perPage: 3,
             gap: 40,
-            padding: { left: "12.5%", right: "64.35%" },
+            padding: { left: 25, right: "14%" },
             speed: 1000,
             interval: 5000,
             autoplay: false,
@@ -87,8 +90,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             breakpoints: {
                 767: {
                     arrows: false,
+                    perPage: 1,
                     gap: 24,
-                    padding: { left: "4%", right: "21.3%" },
+                    padding: { left: 15, right: "21.3%" },
                     autoplay: true,
                     rewind: true,
                 }

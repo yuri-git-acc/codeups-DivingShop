@@ -8,9 +8,13 @@
     height: rem(80);
     background-color: rgba($color: #0D2936, $alpha: 0.68);
     z-index: 999;
+    transition: background-color 0.3s;
     @include mq("md"){
         height: rem(90);
     }
+}
+.header.js-open {
+    background-color: $main;
 }
 
 .header__inner {

@@ -9,61 +9,62 @@
 
 .layout__top-about {
         margin-top: rem(84);
-        padding-bottom: rem(74);
-    @include mq("md"){
-        margin-top: rem(139);
-        padding-bottom: rem(164);
+        @include mq("md"){
+            margin-top: rem(139);
+        }
     }
-}
-
-.layout__information {
-    padding-top: rem(80);
-    padding-bottom: rem(84);
-    @include mq("md"){
-        padding-top: rem(95);
-        padding-bottom: rem(76);
+    
+    .layout__information {
+        margin-top: rem(74);
+        padding-top: rem(80);
+        padding-bottom: rem(84);
+        @include mq("md"){
+            margin-top: rem(164);
+            padding-top: rem(95);
+            padding-bottom: rem(76);
+        }
     }
-}
-
-.layout__top-blog {
-    padding-top: rem(80);
-    @include mq("md"){
-        padding-top: rem(95);
+    
+    .layout__top-blog {
+        margin-top: rem(80);
+        @include mq("md"){
+            margin-top: 0;
+            padding-top: rem(95);
     }
 }
 
 .layout__top-voice {
-    padding-top: rem(83);
-    padding-bottom: rem(84);
+    margin-top: rem(83);
     @include mq("md"){
-        padding-top: rem(139);
-        padding-bottom: rem(144);
+        margin-top: rem(139);
     }
 }
 
 
 .layout__top-price {
+    margin-top: rem(84);
     padding-top: rem(80);
     padding-bottom: rem(84);
     @include mq("md"){
+        margin-top: rem(144);
         padding-top: rem(95);
         padding-bottom: rem(104);
     }
 }
 
 .layout__contact-common {
-    padding-top: rem(80);
-    padding-bottom: rem(104);
+    margin-top: rem(80);
     @include mq("md"){
-        padding-top: rem(140);
-        padding-bottom: rem(159);
+        margin-top: rem(140);
     }
 }
 
 .layout__footer {
+    margin-top: rem(104);
     padding-top: rem(48);
     padding-bottom: rem(56);
     @include mq("md"){
+        margin-top: rem(159);
         padding-top: rem(80);
         padding-bottom: rem(80);
     }
