@@ -1,7 +1,20 @@
 @use "global" as *;
 
 .top-price {
-    background-color: $bg
+    background-color: $bg;
+    position: relative;
+}
+
+.top-price::after {
+    @include mq("md"){
+        position: absolute;
+        content: '';
+        width:  rem(437);
+        height:  rem(201);
+        bottom: rem(60);
+        left: calc(50% - min(50% - ((20 / (1440 / 2)) * 50%), rem((1440 / 2)- 100)));
+        background: url(../images/common/fish_green_pic.webp) left top /contain no-repeat;
+    }
 }
 
 .top-price__contents {
@@ -85,30 +98,8 @@
 
 .top-price__btn {
     margin-top: rem(39);
-    margin-right: rem(3);
     text-align: center;
     @include mq("md"){
         margin-top: rem(80);
-    }
-}
-
-.top-price__arrangement {
-    @include mq("md"){
-        margin-inline: auto;
-        position: relative;
-        max-width: rem(1280);
-    }
-}
-
-.top-price__arrangement::after {
-    @include mq("md"){
-        position: absolute;
-        content: '';
-        width:  rem(437);
-        width: calc((437 / 1280)* 100%);
-        height:  rem(201);
-        top: rem(-23);
-        left: rem(20);
-        background: url(../images/common/fish_green_pic.webp) left top /contain no-repeat;
     }
 }

@@ -55,14 +55,3 @@
     top: rem(-3);
     rotate: 40deg;
 }
-
-/* 次のスライドが無い場合の矢印 */
-.arrow-button:disabled,
-.arrow-button.is-disabled {
-    pointer-events: none;
-    cursor: default;
-    opacity: 0.3;
-}
-.arrow-button:disabled .arrow-button__tip {
-    cursor: default;
-}

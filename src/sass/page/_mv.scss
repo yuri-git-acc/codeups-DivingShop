@@ -94,9 +94,11 @@
 
 .mv__copy-main {
     font-size: rem(40);
-    letter-spacing: 0.52em;
-    text-indent: 0.52em;
-    line-height: 1;
+    letter-spacing: 0.53em;
+    text-indent: 0.53em;
+    line-height: 1.28;
+    font-family: $third-font-family;
+    font-weight: $normal;
     @include mq("md"){
         font-size: rem(80);
     }
@@ -104,7 +106,6 @@
 
 .mv__copy-sub {
     font-size: rem(20);
-    margin-top: rem(3);
 }
 
 .mv__loading-bg {

@@ -1,21 +1,39 @@
 @use "global" as *;
 
-.inner.top-campaign__inner {
-    padding-inline: 0;
+.top-campaign {
+    overflow: hidden;
 }
+
+.top-campaign__inner {
+    max-width: rem(630);
+    padding-inline: rem(5);
+    margin-inline: auto;
+
+    @include mq("md"){
+        max-width: rem(1150);
+        padding-inline: rem(25);
+        position: relative
+    }
+}
+
 .top-campaign__slider {
     margin-top: rem(28);
     margin-right: calc(50% - 50vw);
     max-width: 100vw;
+    overflow: hidden;
+    padding-left: rem(10);
     @include mq("md"){
         margin-top: rem(39);
         position: relative;
     }
 }
 
+.top-campaign__slide-track {
+    overflow: visible;
+}
+
 .top-campaign__btn {
     margin-top: rem(20);
-    margin-right: rem(3);
     text-align: center;
     @include mq("md"){
         margin-top: rem(60);
