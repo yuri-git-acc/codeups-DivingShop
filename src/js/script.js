@@ -92,6 +92,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         speed: 1000,
         interval: 5000,
         autoplay: true,
+        padding: { left: 10, right: 0 },
         breakpoints: {
             767: {
                 arrows: false,
@@ -137,6 +138,24 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
                 counter = 1;
             }
         });
+    });
+
+    // topページのプライスの画像alt切り替え ------------------------------------
+    $(document).ready(function () {
+        function updateAltText() {
+            var img = $(".top-price__img img");
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                img.attr("alt", "大きな珊瑚とたくさんの赤い小魚の写真"); // PC版のalt
+            } else {
+                img.attr("alt", "ウミガメの写真"); // スマホ版のalt
+            }
+        }
+
+        // 初回実行
+        updateAltText();
+
+        // 画面サイズが変わるたびにaltを更新
+        $(window).on("resize", updateAltText);
     });
 
     // ページトップに戻るボタン ------------------------------------

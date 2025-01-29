@@ -8,21 +8,27 @@
     display: grid;
     grid-row: span 4;
     grid-template-rows: subgrid;
+
+    @include mq("md") {
+        max-width: rem(333);
+    }
 }
 
 // topページでのrow-gap設定 ------------------
 .top-blog__cards .blog-card:nth-child(n+2) {
     margin-top: rem(39);
-    @include mq("md"){
+
+    @include mq("md") {
         margin-top: unset;
     }
 }
 
 .top-blog__cards .blog-card:nth-child(n+4) {
-    @include mq("md"){
+    @include mq("md") {
         margin-top: rem(39);
     }
 }
+
 // ----------------------------------------
 
 .blog-card img {
@@ -52,8 +58,8 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     overflow: hidden;
-    @include mq("md"){
+
+    @include mq("md") {
         padding-right: rem(1);
     }
 }
-

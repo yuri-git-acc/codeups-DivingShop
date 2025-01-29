@@ -27,11 +27,11 @@
      <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous">
     <!-- css -->
-    <link rel="stylesheet" href="./assets/css/style.css?0123" />
+    <link rel="stylesheet" href="./assets/css/style.css?0130" />
     <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="./assets/js/jquery.inview.min.js"></script>
-    <script defer src="./assets/js/script.js?0123"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="./assets/js/jquery.inview.min.js"></script>
+    <script defer src="./assets/js/script.js?0130"></script>
 </head>
 
 <body id="top">
@@ -299,14 +299,14 @@
     </div>
     <main>
         <!-- campaign --------------------------------- -->
-        <section class="top-campaign layout__campaign">
+        <section class="top-campaign layout-campaign">
             <div class="top-campaign__inner">
-                <div class="section-title">
+                <div class="top-campaign__title section-title">
                     <p class="section-title__sub">Campaign</p>
                     <h2 class="section-title__main">キャンペーン</h2>
                 </div>
                 <div class="top-campaign__slider splide js-splide-campaign">
-                    <div class="splide__track top-campaign__slide-track">
+                    <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide splide__card">
                                 <div class="card">
@@ -377,17 +377,17 @@
                     <button class="splide__arrow splide__arrow--next arrow-button next"><span class="arrow-button__tip arrow-button__tip--next"></span></button>
                 </div>
                 <div class="top-campaign__btn">
-                    <div class="button">
+                    <a href="#" class="button">
                         <div class="button__bg-anime"></div>
-                        <a href="#" class="button__text">View more<span></span></a>
-                    </div>
+                        <p class="button__text">View more<span></span></p>
+                    </a>
                 </div>
             </div>
         </section>
         <!-- about --------------------------------- -->
-        <section class="top-about layout__top-about">
+        <section class="top-about layout-top-about">
             <div class="top-about__inner inner">
-                <div class="section-title">
+                <div class="top-about__title section-title">
                     <p class="section-title__sub">About us</p>
                     <h2 class="section-title__main">私たちについて</h2>
                 </div>
@@ -398,10 +398,10 @@
                             <p class="top-about__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
                             <div class="top-about__btn">
-                                <div class="button">
+                                <a href="#" class="button">
                                     <div class="button__bg-anime"></div>
-                                    <a href="#" class="button__text">View more<span></span></a>
-                                </div>
+                                    <p class="button__text">View more<span></span></p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -409,9 +409,9 @@
             </div>
         </section>
         <!-- information --------------------------------- -->
-        <section class="top-information layout__information">
+        <section class="top-information layout-information">
             <div class="top-information__inner inner">
-                <div class="section-title">
+                <div class="top-information__title section-title">
                     <p class="section-title__sub">Information</p>
                     <h2 class="section-title__main">ダイビング情報</h2>
                 </div>
@@ -424,114 +424,112 @@
                         <p class="top-information__text">当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>
 正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。</p>
                         <div class="top-information__btn">
-                            <div class="button">
+                            <a href="#" class="button">
                                 <div class="button__bg-anime"></div>
-                                <a href="#" class="button__text">View more<span></span></a>
-                            </div>
+                                <p class="button__text">View more<span></span></p>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- blog --------------------------------- -->
-        <section class="top-blog layout__top-blog">
+        <section class="top-blog layout-top-blog">
             <div class="top-blog__inner inner">
-                <div class="section-title">
+                <div class="top-blog__title section-title">
                     <p class="section-title__sub section-title__sub--white">Blog</p>
                     <h2 class="section-title__main section-title__main--white">ブログ</h2>
                 </div>
-                <div class="top-blog__cards">
-                        <a href="#" class="blog-card">
+                <div class="top-blog__cards blog-cards">
+                        <a href="#" class="blog-cards__item blog-card">
                             <div><img src="./assets/images/blog/blog_01.webp" alt="珊瑚の写真" width="602" height="402" loading="lazy" decoding="async"></div>
                             <time datetime="2023-11-17" class="blog-card__time">2023.11.17</time>
-                            <span class="blog-card__title">ライセンス取得</span>
-                            <span class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</span>
+                            <p class="blog-card__title">ライセンス取得</p>
+                            <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
                         </a>
-                        <a href="#" class="blog-card">
+                        <a href="#" class="blog-cards__item blog-card">
                             <div><img src="./assets/images/blog/blog_02.webp" alt="海の中を泳いでいるウミガメの写真" width="602" height="402" loading="lazy" decoding="async"></div>
                             <time datetime="2023-11-17" class="blog-card__time">2023.11.17</time>
-                            <span class="blog-card__title">ウミガメと泳ぐ</span>
-                            <span class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</span>
+                            <p class="blog-card__title">ウミガメと泳ぐ</p>
+                            <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
                         </a>
-                        <a href="#" class="blog-card">
+                        <a href="#" class="blog-cards__item blog-card">
                             <div><img src="./assets/images/blog/blog_03.webp" alt="イソギンチャクの中に隠れているカクレクマノミの写真" width="602" height="402" loading="lazy" decoding="async"></div>
                             <time datetime="2023-11-17" class="blog-card__time">2023.11.17</time>
-                            <span class="blog-card__title">カクレクマノミ</span>
-                            <span class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</span>
+                            <p class="blog-card__title">カクレクマノミ</p>
+                            <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
                         </a>
 
                 </div>
                 <div class="top-blog__btn">
-                    <div class="button">
+                    <a href="#" class="button">
                         <div class="button__bg-anime"></div>
-                        <a href="#" class="button__text">View more<span></span></a>
-                    </div>
+                        <p class="button__text">View more<span></span></p>
+                    </a>
                 </div>
             </div>
         </section>
         <!-- voice --------------------------------- -->
-        <section class="top-voice layout__top-voice">
+        <section class="top-voice layout-top-voice">
             <div class="top-voice__inner inner">
-                <div class="section-title">
+                <div class="top-voice__title section-title">
                     <p class="section-title__sub">Voice</p>
                     <h2 class="section-title__main">お客様の声</h2>
                 </div>
-                <div class="top-voice__cards">
-                    <div class="voice-cards">
-                        <div class="voice-card">
-                            <div class="voice-card__head">
-                                <div class="voice-card__content">
-                                    <div class="voice-card__intro">
-                                        <div class="voice-card__belong">20代(女性)</div>
-                                        <div class="voice-card__select">ライセンス講習</div>
-                                    </div>
-                                    <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
+                <div class="top-voice__cards voice-cards">
+                    <div class="voice-cards__item voice-card">
+                        <div class="voice-card__head">
+                            <div class="voice-card__content">
+                                <div class="voice-card__intro">
+                                    <div class="voice-card__belong">20代(女性)</div>
+                                    <div class="voice-card__select">ライセンス講習</div>
                                 </div>
-                                <div class="voice-card__img js-img-anime colorbox"><img src="./assets/images/voice/voice_01.webp" alt="帽子を被った笑顔の女性の写真" width="360" height="280" loading="lazy" decoding="async"></div>
+                                <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
                             </div>
-                            <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。</p>
+                            <div class="voice-card__img js-img-anime colorbox"><img src="./assets/images/voice/voice_01.webp" alt="帽子を被った笑顔の女性の写真" width="360" height="280" loading="lazy" decoding="async"></div>
                         </div>
-                        <div class="voice-card">
-                            <div class="voice-card__head">
-                                <div class="voice-card__content">
-                                    <div class="voice-card__intro">
-                                        <div class="voice-card__belong">20代(男性)</div>
-                                        <div class="voice-card__select">ファンダイビング</div>
-                                    </div>
-                                    <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
+                        <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。</p>
+                    </div>
+                    <div class="voice-cards__item voice-card">
+                        <div class="voice-card__head">
+                            <div class="voice-card__content">
+                                <div class="voice-card__intro">
+                                    <div class="voice-card__belong">20代(男性)</div>
+                                    <div class="voice-card__select">ファンダイビング</div>
                                 </div>
-                                <div class="voice-card__img js-img-anime colorbox"><img src="./assets/images/voice/voice_02.webp" alt="サムズアップのポーズをした男性の写真" width="360" height="280" loading="lazy" decoding="async"></div>
+                                <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
                             </div>
-                            <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。</p>
+                            <div class="voice-card__img js-img-anime colorbox"><img src="./assets/images/voice/voice_02.webp" alt="サムズアップのポーズをした男性の写真" width="360" height="280" loading="lazy" decoding="async"></div>
                         </div>
+                        <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。</p>
                     </div>
                 </div>
                 <div class="top-voice__btn">
-                    <div class="button">
+                    <a href="#" class="button">
                         <div class="button__bg-anime"></div>
-                        <a href="#" class="button__text">View more<span></span></a>
-                    </div>
+                        <p class="button__text">View more<span></span></p>
+                    </a>
                 </div>
             </div>
         </section>
         <!-- price --------------------------------- -->
-        <section class="top-price layout__top-price">
+        <section class="top-price layout-top-price">
             <div class="top-price__inner inner">
-                <div class="section-title">
+                <div class="top-price__title section-title">
                     <p class="section-title__sub">Price</p>
                     <h2 class="section-title__main">料金一覧</h2>
                 </div>
                 <div class="top-price__contents">
                     <div class="top-price__img js-img-anime colorbox">
                         <picture>
-                            <source srcset="./assets/images/price/priceimg_pc.webp" media="(min-width: 768px)" alt="大きな珊瑚とたくさんの赤い小魚の写真" type="image/webp">
+                            <source srcset="./assets/images/price/priceimg_pc.webp" media="(min-width: 768px)" type="image/webp">
                             <img src="./assets/images/price/priceimg_sp.jpg" alt="ウミガメの写真" width="690" height="454">
                         </picture>
                     </div>
-                    <div class="top-price__main">
-                        <div class="top-price__item">
-                            <p class="top-price__title">ライセンス講習</p>
-                            <table class="top-price__list">
+                    <div class="top-price__list top-price-list">
+                        <div class="top-price-list__item top-price-item">
+                            <p class="top-price-item__title">ライセンス講習</p>
+                            <table class="top-price-item__list">
                                 <tr>
                                     <th>オープンウォーターダイバーコース</th>
                                     <td>¥50,000</td>
@@ -546,9 +544,9 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="top-price__item">
-                            <p class="top-price__title">体験ダイビング</p>
-                            <table class="top-price__list">
+                        <div class="top-price-list__item top-price-item">
+                            <p class="top-price-item__title">体験ダイビング</p>
+                            <table class="top-price-item__list">
                                 <tr>
                                     <th>ビーチ体験ダイビング(半日)</th>
                                     <td>¥7,000</td>
@@ -567,9 +565,9 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="top-price__item">
-                            <p class="top-price__title">ファンダイビング</p>
-                            <table class="top-price__list">
+                        <div class="top-price-list__item top-price-item">
+                            <p class="top-price-item__title">ファンダイビング</p>
+                            <table class="top-price-item__list">
                                 <tr>
                                     <th>ビーチダイビング(2ダイブ)</th>
                                     <td>¥14,000</td>
@@ -588,9 +586,9 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="top-price__item">
-                            <p class="top-price__title">スペシャルダイビング</p>
-                            <table class="top-price__list">
+                        <div class="top-price-list__item top-price-item">
+                            <p class="top-price-item__title">スペシャルダイビング</p>
+                            <table class="top-price-item__list">
                                 <tr>
                                     <th>貸切ダイビング(2ダイブ)</th>
                                     <td>¥24,000</td>
@@ -604,16 +602,16 @@
                     </div>
                 </div>
                 <div class="top-price__btn">
-                    <div class="button">
+                    <a href="#" class="button">
                         <div class="button__bg-anime"></div>
-                        <a href="#" class="button__text">View more<span></span></a>
-                    </div>
+                        <p class="button__text">View more<span></span></p>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
     <!-- contact --------------------------------- -->
-    <section class="contact-common layout__contact-common">
+    <section class="contact-common layout-contact-common">
         <div class="contact-common__inner inner">
             <div class="contact-common__wrap">
                 <div class="contact-common__top">
@@ -640,10 +638,10 @@
                         </div>
                         <p class="contact-common__text">ご予約・お問い合わせはコチラ</p>
                         <div class="contact-common__link">
-                            <div class="button button--white">
+                            <a href="#" class="button button--white">
                                 <div class="button__bg-anime"></div>
-                                    <a href="#" class="button__text">Contact us<span></span></a>
-                            </div>
+                                    <p class="button__text">Contact us<span></span></p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -651,7 +649,7 @@
         </div>
     </section>
     <!-- footer --------------------------------- -->
-    <footer class="footer layout__footer">
+    <footer class="footer layout-footer">
         <div class="footer__inner inner">
             <div class="footer__head">
                 <div class="footer__logo">

@@ -10,8 +10,9 @@
     aspect-ratio: 280 / 188;
     object-fit: cover;
     height: auto;
-    @include mq("md"){
-    aspect-ratio: 333 / 223;
+
+    @include mq("md") {
+        aspect-ratio: 333 / 223;
     }
 }
 
@@ -20,7 +21,8 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    @include mq("md"){
+
+    @include mq("md") {
         padding: rem(24) rem(16) rem(36);
     }
 }
@@ -34,7 +36,8 @@
     display: inline-block;
     display: flex;
     align-self: start;
-    @include mq("md"){
+
+    @include mq("md") {
         padding: rem(5) rem(15);
     }
 }
@@ -54,7 +57,8 @@
     line-height: calc(24 / 14);
     margin-top: rem(8);
     text-align: center;
-    @include mq("md"){
+
+    @include mq("md") {
         font-size: rem(16);
         margin-top: rem(15);
         padding-right: rem(16);
@@ -68,7 +72,8 @@
     justify-content: center;
     align-items: baseline;
     font-family: $third-font-family;
-    @include mq("md"){
+
+    @include mq("md") {
         gap: rem(25);
         margin-top: rem(6);
     }
@@ -78,7 +83,8 @@
     font-size: rem(20);
     font-weight: $bold;
     position: relative;
-    @include mq("md"){
+
+    @include mq("md") {
         font-size: rem(24);
     }
 }
@@ -96,11 +102,12 @@
 }
 
 .card__price-sale {
-    font-size:  rem(32);
+    font-size: rem(32);
     font-weight: $bold;
     line-height: 1;
     color: $main;
-    @include mq("md"){
+
+    @include mq("md") {
         font-size: rem(40);
     }
 }

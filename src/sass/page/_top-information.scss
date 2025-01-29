@@ -5,11 +5,12 @@
 }
 
 .top-information__container {
-    margin-top: rem(28);
-    @include mq("md"){
-        margin-top: rem(39);
+    margin-top: rem(25);
+
+    @include mq("md") {
+        margin-top: rem(31);
         display: grid;
-        grid-template-columns:  calc((540 / 1080) * 100%) calc((492 / 1080) * 100%);
+        grid-template-columns: calc((540 / 1080) * 100%) calc((492 / 1080) * 100%);
         gap: rem(48);
     }
 }
@@ -18,14 +19,16 @@
     aspect-ratio: 345 / 227;
     object-fit: cover;
     height: auto;
-    @include mq("md"){
+
+    @include mq("md") {
         aspect-ratio: 540 / 356;
     }
 }
 
 .top-information__main {
     margin-top: rem(25);
-    @include mq("md"){
+
+    @include mq("md") {
         margin-top: rem(54);
     }
 }
@@ -36,7 +39,8 @@
     line-height: calc(24 / 20);
     border-bottom: 1px solid $main;
     padding-bottom: rem(2);
-    @include mq("md"){
+
+    @include mq("md") {
         font-size: rem(24);
         line-height: 1;
         padding-block: rem(7);
@@ -52,4 +56,3 @@
     margin-top: rem(40);
     text-align: center;
 }
-
