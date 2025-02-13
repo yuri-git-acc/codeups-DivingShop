@@ -51,25 +51,25 @@
     margin-left: rem(6);
 }
 
-.nav__items-1 {
+.nav__items--1 {
     grid-area: menu1;
     @include mq("md"){
         grid-area: unset;
     }
 }
-.nav__items-2 {
+.nav__items--2 {
     grid-area: menu2;
     @include mq("md"){
         grid-area: unset;
     }
 }
-.nav__items-3 {
+.nav__items--3 {
     grid-area: menu3;
     @include mq("md"){
         grid-area: unset;
     }
 }
-.nav__items-4 {
+.nav__items--4 {
     grid-area: menu4;
     @include mq("md"){
         grid-area: unset;

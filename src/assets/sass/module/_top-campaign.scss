@@ -16,10 +16,22 @@
     margin-top: rem(28);
     margin-right: calc(50% - 50vw);
     max-width: 100vw;
-
+    
     @include mq("md"){
         margin-top: rem(39);
         position: relative;
+    }
+}
+
+.top-campaign__card {
+    padding-bottom: rem(20);
+    display: flex;
+    width: rem(280);
+    @include mq("md"){
+        width: rem(334);
+        display: grid;
+        grid-template-rows: subgrid;
+    grid-row: span 5;
     }
 }
 

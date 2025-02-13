@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.sub-mv__bg {
+  width:  100%;
+  height: rem(460);
+  display: grid;
+  place-content:center;
+  @include mq("md"){
+      height: rem(548);
+  }
+}
+
+.sub-mv__bg--campaign {
+  background: url(../images/campaign/campaign_sp_fv.webp) center center / cover no-repeat;
+  @include mq("md"){
+      background-image: url(../images/campaign/campaign_pc_fv.webp);
+  }
+}
+
+.sub-mv__bg--aboutus {
+  background: url(../images/aboutus/aboutus_sp_fv.webp) center center / cover no-repeat;
+  @include mq("md"){
+      background-image: url(../images/aboutus/aboutus_pc_fv.webp);
+  }
+}
+
+.sub-mv__title {
+  font-family: $third-font-family;
+  font-size: rem(40);
+  font-weight: $normal;
+  color: $white;
+  @include mq("md"){
+    margin-top: rem(90);
+      font-size: rem(80);
+      line-height: calc(100 / 80);
+  }
+}
+

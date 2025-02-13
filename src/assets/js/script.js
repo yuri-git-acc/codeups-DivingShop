@@ -221,5 +221,56 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         });
     });
 
+    // モーダル関連の要素を取得
+const modalTriggers = $('.js-modal-open img');
+const modal = $('#modal');
+const modalImage = $('.gallery__modal-img');
+let isModalEnabled = $(window).width() > 768; // 初期判定
+
+// 画面サイズが変更されたときに再判定
+$(window).on("resize", function () {
+    isModalEnabled = $(window).width() > 768;
 });
 
+// モーダルを開く処理
+modalTriggers.on("click", function () {
+    if (!isModalEnabled) return; // SPの場合は処理しない
+
+    event.preventDefault(); // 画像のクリック動作を防止
+
+    // クリックした画像の情報を取得
+    const imgSrc = $(this).attr("src");
+    const imgAspectRatio = $(this).css("aspect-ratio"); // aspect-ratio を取得
+
+    // モーダルの画像を設定
+    modalImage.attr("src", imgSrc);
+
+    // aspect-ratio を適用（未指定の場合は自動で設定しない）
+    if (imgAspectRatio) {
+        modalImage.css("aspect-ratio", imgAspectRatio);
+    } else {
+        modalImage.css("aspect-ratio", "auto");
+    }
+
+    $("body").addClass("noscroll");
+
+    // モーダルを表示する
+    modal.css({
+        "opacity": "1",
+        "visibility": "visible"
+    });
+});
+
+// モーダルを閉じる処理
+modal.on("click", function () {
+    if (!isModalEnabled) return; // SPの場合は処理しない
+
+    modal.css({
+        "opacity": "0",
+        "visibility": "hidden"
+    });
+    $("body").removeClass("noscroll");
+});
+
+
+});

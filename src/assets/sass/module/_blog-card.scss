@@ -9,9 +9,6 @@
     grid-row: span 4;
     grid-template-rows: subgrid;
 
-    @include mq("md") {
-        max-width: rem(333);
-    }
 }
 
 // topページでのrow-gap設定 ------------------

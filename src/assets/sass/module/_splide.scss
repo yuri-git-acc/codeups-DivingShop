@@ -1,12 +1,12 @@
 @use "global" as *;
 
 // mv
-.splide__img {
+.mv__splide .splide__slide {
     height: 100vh;
     height: 100svh;
 }
 
-.splide__img img {
+.mv__splide .splide__slide img {
     aspect-ratio: 375 / 667;
     object-fit: cover;
     width:  100%;
@@ -18,13 +18,9 @@
 }
 
 // campaign
-.splide__card {
-    padding-bottom: rem(20);
-    display: flex;
-    width: rem(280);
-    @include mq("md"){
-        width: rem(334);
-    }
+.splide__list {
+    display: grid;
+    grid-auto-flow: column;
 }
 
 .splide__arrows {

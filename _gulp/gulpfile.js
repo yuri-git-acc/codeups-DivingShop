@@ -22,9 +22,9 @@ const rename = require('gulp-rename');//ファイル名変更
 
 // 読み込み先
 const srcPath = {
-  css: "../src/sass/**/*.scss",
-  js: "../src/js/**/*",
-  img: "../src/images/**/*",
+  css: "../src/assets/sass/**/*.scss",
+  js: "../src/assets/js/**/*",
+  img: "../src/assets/images/**/*",
   html: ["../src/**/*.html", "!./node_modules/**"],
 };
 
