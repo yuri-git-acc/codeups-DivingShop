@@ -325,7 +325,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
         // バリデーション成功なら送信
         if (isValid) {
-            alert('送信できます！');
+            window.location.href = 'completed.html';
             // 実際の送信処理をここに記述
         }
     });
