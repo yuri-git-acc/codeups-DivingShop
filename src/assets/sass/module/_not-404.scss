@@ -1,0 +1,84 @@
+@use "global"as *;
+
+.not-404 {
+    background-color: $main;
+}
+
+.not-404__content {
+    display: grid;
+    justify-content: center;
+    margin-top: rem(59);
+    text-align: center;
+    position: relative;
+
+    @include mq("md") {
+        margin-top: rem(134);
+    }
+}
+
+.not-404__inner {
+    position: relative;
+}
+
+.not-404__content::before {
+    content: "";
+    position: absolute;
+    top: rem(-88);
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-mask-image: url(../images/common/whale.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url(../images/common/whale.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: rgba($color: $font, $alpha: 0.1);
+    display: inline-block;
+    width: rem(345);
+    aspect-ratio: 1/1;
+
+    @include mq("md") {
+        width: rem(698);
+        left: calc(50% - min(50% - ((180 / (1080 / 2))*50%), rem((1080 / 2) - 150)));
+        left: calc(50% - min(50%, rem(1080 / 2)));
+        top: rem(-163);
+        transform: unset;
+    }
+}
+
+.not-404__title {
+    font-size: rem(80);
+    font-weight: $normal;
+    font-family: $third-font-family;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    color: $white;
+    line-height: 1;
+    z-index: 5;
+
+    @include mq("md") {
+        font-size: rem(160);
+    }
+}
+
+.not-404__text {
+    line-height: calc(24 / 16);
+    color: $white;
+    margin-top: rem(3);
+    font-weight: $regular;
+
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.not-404__btn {
+    margin-top: rem(41);
+    z-index: 5;
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}

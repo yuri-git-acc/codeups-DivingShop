@@ -1,0 +1,111 @@
+@use "global"as *;
+
+.information-article--reverse {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include mq("md") {
+        display: grid;
+        grid-template-columns: calc((540 / 1080) * 100%) auto;
+        grid-template-areas: "img main";
+        gap: rem(48);
+    }
+}
+
+.information-article__main--reverse {
+    margin-top: rem(25);
+
+    @include mq("md") {
+        margin-top: rem(54);
+        grid-area: main;
+    }
+}
+
+.information-article--normal {
+    border: 1px solid $main;
+    padding: rem(20) rem(23) rem(23);
+    display: none;
+    flex-direction: column;
+    gap: rem(9);
+
+    @include mq("md") {
+        border-width: 2px;
+        padding: rem(22);
+        flex-direction: row;
+        gap: rem(48);
+        align-items: center;
+    }
+}
+
+.information-article__main--normal {
+    @include mq("md") {
+        flex: 1;
+        padding-bottom: rem(6);
+    }
+}
+
+.information-article__img {
+    @include mq("md") {
+        grid-area: img;
+    }
+}
+
+.information-article__img img {
+    object-fit: cover;
+    height: auto;
+}
+
+.information-article__img--low {
+    aspect-ratio: 297 / 189;
+
+    @include mq("md") {
+        aspect-ratio: 492 / 313;
+    }
+}
+
+.information-article__img--top img {
+    aspect-ratio: 345 / 227;
+
+    @include mq("md") {
+        aspect-ratio: 540 / 356;
+    }
+}
+
+.information-article__img {
+    @include mq("md") {
+        flex: 1;
+    }
+}
+
+.information-article__title {
+    font-size: rem(20);
+    font-weight: $bold;
+    line-height: calc(24 / 20);
+    border-bottom: 1px solid $main;
+
+    @include mq("md") {
+        font-size: rem(24);
+        line-height: 1;
+        padding-block: rem(7);
+    }
+}
+
+.information-article__title--top {
+    padding-bottom: rem(3);
+}
+
+.information-article__title--normal {
+    padding-bottom: rem(5);
+    font-size: rem(24);
+}
+
+.information-article__text {
+    margin-top: rem(7);
+    line-height: calc(24 / 16);
+    color: $black;
+}
+
+.information-article__btn {
+    margin-top: rem(40);
+    text-align: center;
+}

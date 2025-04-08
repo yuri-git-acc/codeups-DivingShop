@@ -1,0 +1,14 @@
+@use "global"as *;
+
+#license,
+#experience,
+#fundiving,
+#tab-1,
+#tab-3:target,
+#tab-2:target {
+    scroll-margin-top: rem(80);
+
+    @include mq("md") {
+        scroll-margin-top: rem(90);
+    }
+}

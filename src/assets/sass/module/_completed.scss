@@ -1,0 +1,15 @@
+@use "global"as *;
+
+.completed__text {
+    text-align: center;
+}
+
+.completed__text--bottom {
+    margin-top: rem(38);
+    line-height: calc(19 / 16);
+
+    @include mq("md") {
+        margin-top: rem(37);
+        line-height: calc(23 / 16);
+    }
+}

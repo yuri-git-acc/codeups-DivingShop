@@ -1,4 +1,4 @@
-@use "global" as *;
+@use "global"as *;
 
 .button {
     display: inline-block;
@@ -11,6 +11,10 @@
     .button:hover {
         opacity: 1;
     }
+}
+
+.button--contact {
+    width: rem(202);
 }
 
 .button::before,
@@ -28,6 +32,14 @@
     left: rem(4);
 }
 
+.button--not-404::before {
+    border-color: $white;
+}
+
+.button--not-404 {
+    border-color: $white;
+}
+
 .button.button--white::before {
     background-color: $white;
 }
@@ -38,6 +50,9 @@
     background-color: $main;
 }
 
+.button--not-404::after {
+    background-color: $white;
+}
 
 .button__bg-anime {
     position: absolute;
@@ -47,6 +62,10 @@
     height: 100%;
     border: 1px solid $main;
     z-index: 5;
+}
+
+.button__bg-anime--not-404 {
+    border-color: $white;
 }
 
 .button__bg-anime::after {
@@ -62,7 +81,9 @@
 }
 
 @media (any-hover: hover) {
-    .button:hover .button__bg-anime::after {
+
+    .button:not(:disabled):hover .button__bg-anime::after,
+    .button:not(:disabled):focus .button__bg-anime::after {
         transform: scale(1, 1);
     }
 }
@@ -74,13 +95,25 @@
     color: $white;
     display: flex;
     align-items: center;
+    justify-content: center;
     z-index: 10;
     position: relative;
     transition: color 0.3s;
 }
 
+.button__text--contact {
+    gap: rem(10);
+}
+
+.button__text--not-404 {
+    color: $main;
+    gap: rem(10);
+}
+
 @media (any-hover: hover) {
-    .button:hover .button__text {
+
+    .button:not(:disabled):hover .button__text,
+    .button:not(:disabled):focus .button__text {
         color: $main;
     }
 }
@@ -96,8 +129,14 @@
     transition: background-color 0.3s;
 }
 
+.button__text--not-404 span {
+    background-color: $main;
+}
+
 @media (any-hover: hover) {
-    .button:hover .button__text span {
+
+    .button:not(:disabled):hover .button__text span,
+    .button:not(:disabled):focus .button__text span {
         background-color: $main;
     }
 }
@@ -115,8 +154,15 @@
     transition: background-color 0.3s;
 }
 
+.button__text--not-404 span::after {
+    background-color: $main;
+}
+
+
 @media (any-hover: hover) {
-    .button:hover .button__text span::after {
+
+    .button:not(:disabled):hover .button__text span::after,
+    .button:not(:disabled):focus .button__text span::after {
         background-color: $main;
     }
 }

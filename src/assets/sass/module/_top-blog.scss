@@ -1,4 +1,4 @@
-@use "global" as *;
+@use "global"as *;
 
 .top-blog {
     position: relative;
@@ -27,7 +27,7 @@
         width: rem(437);
         height: rem(201);
         top: rem(24);
-        left: calc(50% - min(50% - ((20 / (1440 / 2)) * 50%), rem((1440 / 2)- 100)));
+        left: calc(50% - min(50% - ((20 / (1440 / 2)) * 50%), rem((1440 / 2) - 100)));
         background: url(../images/common/fish_white_pic.webp) left top /contain no-repeat;
     }
 }

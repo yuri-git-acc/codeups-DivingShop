@@ -1,0 +1,48 @@
+@use "global"as *;
+
+.blog__contents {
+    @include mq("md") {
+        display: grid;
+        grid-template-columns: calc((706 / 1080) * 100%) calc((294 / 1080) * 100%);
+        gap: calc((80 / 1080) * 100%);
+    }
+}
+
+.blog__contents--single {
+    @include mq("md") {
+        grid-template-columns: calc((700 / 1080) * 100%) calc((294 / 1080) * 100%);
+        gap: calc((86 / 1080) * 100%);
+    }
+}
+
+.blog__main {
+    padding-inline: rem(6);
+
+    @include mq("md") {
+        padding-inline: unset;
+    }
+}
+
+.blog__pagination {
+    margin-top: rem(80);
+}
+
+.blog__pagination--single {
+    max-width: rem(158);
+    margin-inline: auto;
+    margin-top: rem(40);
+
+    @include mq("md") {
+        margin-top: rem(81);
+    }
+}
+
+.blog__sidebar-all {
+    padding-inline: rem(25);
+    margin-top: rem(80);
+
+    @include mq("md") {
+        padding-inline: unset;
+        margin-top: unset;
+    }
+}

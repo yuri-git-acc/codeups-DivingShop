@@ -1,4 +1,4 @@
-@use "global" as *;
+@use "global"as *;
 
 .campaign-card {
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
@@ -6,7 +6,8 @@
     grid-template-rows: subgrid;
     grid-row: span 6;
     padding: 0 rem(16) rem(24);
-    @include mq("md"){
+
+    @include mq("md") {
         box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
     }
 }
@@ -14,6 +15,7 @@
 .campaign-card__img {
     margin-inline: rem(-16);
 }
+
 .campaign-card__img img {
     aspect-ratio: 280 / 188;
     object-fit: cover;
@@ -110,10 +112,12 @@
         font-size: rem(40);
     }
 }
+
 .campaign-card__pc {
     margin-top: rem(24);
     display: none;
-    @include mq("md"){
+
+    @include mq("md") {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -131,7 +135,8 @@
 
 .campaign-card__date {
     line-height: calc(18 / 16);
-    color: $main;font-weight: $bold;
+    color: $main;
+    font-weight: $bold;
     font-family: $third-font-family;
 }
 
@@ -149,23 +154,26 @@
 
 
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* カード間のスペース */
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(20);
+    /* カード間のスペース */
 }
 
 .campaign__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* カード間のスペース */
+    gap: rem(20);
+    /* カード間のスペース */
 }
 
 .campaign-card {
     display: flex;
     flex-direction: column;
-    flex: 1 1 calc(33.33% - 20px); /* 3列レイアウト */
+    flex: 1 1 calc(33.33% - rem(20));
+    /* 3列レイアウト */
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: rem(20);
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 2;

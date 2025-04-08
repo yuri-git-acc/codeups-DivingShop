@@ -57,7 +57,7 @@ img {
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 
@@ -94,9 +94,14 @@ textarea {
   resize: vertical;
 }
 
+label {
+  position: relative;
+}
+
 input[type="checkbox"],
 input[type="radio"] {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 
 input[type="submit"],
@@ -118,6 +123,8 @@ a {
   transition: opacity 0.3s;
 }
 
-a:hover {
-  opacity: 0.6;
+@media (any-hover: hover) {
+  a:hover {
+    opacity: 0.6;
+  }
 }

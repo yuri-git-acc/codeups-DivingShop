@@ -1,0 +1,49 @@
+@use "global"as *;
+
+.rule {
+    @include mq("md") {
+        max-width: rem(800);
+        margin-inline: auto;
+    }
+}
+
+.rule__title {
+    font-size: rem(24);
+    font-weight: $medium;
+
+    @include mq("md") {
+        font-size: rem(32);
+    }
+}
+
+.rule__main {
+    line-height: calc(32 / 16);
+    margin-top: rem(38);
+}
+
+.rule__margin {
+    margin-top: 2em;
+}
+
+.rule__number-reset {
+    counter-reset: number;
+}
+
+.rule__number {
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.rule__number::before {
+    counter-increment: number;
+    content: counter(number) ".";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: rem(5);
+}
+
+.rule__dut::before {
+    content: "・";
+
+}

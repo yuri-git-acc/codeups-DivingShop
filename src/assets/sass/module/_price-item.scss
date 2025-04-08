@@ -1,0 +1,107 @@
+@use "global"as *;
+
+.price-item {
+    @include mq("md") {
+        display: grid;
+        grid-template-columns: calc((200 / 700) * 100%) calc((500 / 700) * 100%);
+    }
+}
+
+.price-item__title {
+    background-color: $main;
+    color: $white;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(24 / 16);
+    display: flex;
+    gap: rem(8);
+    justify-content: center;
+    align-items: center;
+    padding-block: rem(8);
+    padding-inline: rem(10);
+
+    @include mq("md") {
+        flex-direction: column-reverse;
+    }
+}
+
+.price-item__title::before {
+    content: '';
+    width: rem(24);
+    height: rem(24);
+    display: inline-block;
+    -webkit-mask-image: url(../images/common/whale.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url(../images/common/whale.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $white;
+    flex-shrink: 0;
+
+    @include mq("md") {
+        width: rem(64);
+        height: rem(64);
+    }
+}
+
+.price-item__list {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.price-item__list tbody {
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+
+.price-item__row {
+    display: grid;
+    grid-template-columns: calc((240 / 345) * 100%) auto;
+
+    @include mq("md") {
+        grid-template-columns: calc((340 / 500) * 100%) calc((160 / 500) * 100%);
+    }
+}
+
+.price-item__row:last-of-type {
+    border-bottom: 1px solid $main;
+}
+
+.price-item__head {
+    padding: rem(5.2) rem(11);
+}
+
+.price-item__date {
+    padding: rem(5.2) rem(16);
+}
+
+.price-item__head,
+.price-item__date {
+    line-height: calc(24 / 16);
+    font-weight: $normal;
+    border-top: 1px solid $main;
+    border-right: 1px solid $main;
+    display: grid;
+
+    @include mq("md") {
+        padding: rem(16.5) rem(14);
+    }
+}
+
+.price-item__head {
+    border-left: 1px solid $main;
+    place-content: center;
+
+    @include mq("md") {
+        place-content: start;
+        text-align: left;
+    }
+}
+
+.price-item__date {
+    align-items: center;
+    text-align: end;
+}

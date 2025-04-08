@@ -1,60 +1,94 @@
-@use "global" as *;
+@use "global"as *;
 
 .pagination {
+    clear: both;
     display: flex;
-    gap: rem(40);
-    justify-content: center;
+    max-width: rem(344);
+    margin-inline: auto;
+
+    @include mq("md") {
+        max-width: rem(444);
+    }
 }
-.pagination__box {
+
+.pagination a,
+.pagination span {
+    font-family: $third-font-family;
+    font-weight: $bold;
+    color: $main;
+    border: 1px solid $main;
+    padding: rem(5.5) rem(13.6);
+    white-space: nowrap;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pagination .current,
+.pagination .pagination__number {
+    margin: 0 rem(6);
+}
+
+.pagination a:hover {
+    color: $white;
+    background-color: $main;
+    opacity: 1;
+}
+
+.pagination span.current {
+    color: $white;
+    background-color: $main;
+}
+
+.pagination .pagination__prev {
+    margin-right: auto;
+}
+
+.pagination .pagination__next {
+    margin-left: auto;
+}
+
+.pagination .pagination__prev,
+.pagination .pagination__next {
+    position: relative;
     width: rem(38);
     height: rem(38);
-    display:grid;
-    place-content:center;
-    border: 1px solid $main;
+    display: inline-block;
 }
 
-.pagination__box {
-    position: relative;
-}
-
-.pagination__prev .pagination__box::before,
-.pagination__next .pagination__box::before {
+.pagination__prev::before,
+.pagination__next::before {
     position: absolute;
     content: '';
-    width:  rem(12);
-    height:  rem(12);
-    top:50%;
+    width: rem(12);
+    height: rem(12);
+    top: 50%;
     left: 50%;
     border-top: 1px solid $main;
     border-left: 1px solid $main;
+    transition: all 0.3s;
 }
 
-.pagination__prev .pagination__box::before {
+.pagination__prev::before {
     transform: rotate(-45deg) translate(15%, -50%);
 }
 
-.pagination__next .pagination__box::before {
+.pagination__next::before {
     transform: rotate(137deg) translate(30%, 90%);
 }
 
-.pagination__number-box {
-    display: flex;
-    gap: rem(12);
+.pagination__prev:hover::before,
+.pagination__next:hover::before {
+    border-color: $white;
 }
 
-.pagination__number {
-    color: $main;
-    font-family: $third-font-family;
-    font-weight: $bold;
-}
-
-.pagination__number-pc {
+.pagination__number--pc {
     display: none;
-    @include mq("md"){
+
+    @include mq("md") {
         display: grid;
     }
-}
-.pagination__number--active {
-    background-color: $main;
-    color: $white;
 }

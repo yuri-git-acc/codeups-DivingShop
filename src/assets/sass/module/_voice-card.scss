@@ -1,4 +1,4 @@
-@use "global" as *;
+@use "global"as *;
 
 .voice-card {
     padding: rem(15) rem(16) rem(24);
@@ -14,7 +14,7 @@
 
 .voice-card:nth-child(n+3) {
     @include mq("md") {
-        margin-top: rem(80);
+        margin-top: rem(81);
     }
 }
 
@@ -44,6 +44,7 @@
     @include mq("md") {
         display: flex;
         justify-content: space-between;
+        gap: rem(20);
     }
 }
 
@@ -53,6 +54,7 @@
 
     @include mq("md") {
         margin-top: auto;
+        flex-shrink: 0;
     }
 }
 

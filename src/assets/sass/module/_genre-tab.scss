@@ -1,16 +1,17 @@
-@use "global" as *;
+@use "global"as *;
 
-.campaign-tab {
+.genre-tab {
     gap: rem(16) rem(21);
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    @include mq("md"){
+
+    @include mq("md") {
         column-gap: rem(32);
     }
 }
 
-.campaign-tab__item {
+.genre-tab__item {
     min-width: rem(162);
     font-size: rem(14);
     color: $main;
@@ -21,7 +22,7 @@
     border: 1px solid $main;
 }
 
-.campaign-tab__item--active {
+.genre-tab__item--active {
     background-color: $main;
     color: $white;
 }

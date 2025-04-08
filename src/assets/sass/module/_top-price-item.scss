@@ -1,4 +1,4 @@
-@use "global" as *;
+@use "global"as *;
 
 
 .top-price-item__title {
@@ -13,7 +13,7 @@
     border-collapse: collapse;
 }
 
-.top-price-item__list tr {
+.top-price-item__row {
     display: grid;
     grid-template-columns: auto rem(70);
     gap: rem(10);
@@ -21,8 +21,8 @@
     margin-top: rem(6);
 }
 
-.top-price-item__list th,
-.top-price-item__list td {
+.top-price-item__head,
+.top-price-item__date {
     font-size: rem(14);
     line-height: calc(24 / 14);
     font-weight: $normal;
@@ -33,11 +33,11 @@
     }
 }
 
-.top-price-item__list th {
+.top-price-item__head {
     margin-right: auto;
     text-align: left;
 }
 
-.top-price-item__list td {
+.top-price-item__date {
     margin-left: auto;
 }

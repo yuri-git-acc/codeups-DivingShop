@@ -1,0 +1,12 @@
+@use "global"as *;
+
+.required {
+    background-color: $red;
+    color: $white;
+    font-weight: $normal;
+    padding: rem(5) rem(11) rem(4);
+    font-size: rem(12);
+    letter-spacing: 0.4em;
+    text-indent: 0.4em;
+    line-height: 1;
+}
