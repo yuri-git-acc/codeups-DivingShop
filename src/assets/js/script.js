@@ -274,7 +274,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     // FAQアコーディオン　　------------------------------------
     // 初期状態で全てのアコーディオンを開く
     $('.js-accordion-title').attr('aria-expanded', 'false');
-    $('.js-accordion-content').attr('aria-hidden', 'true').hide();
+    $('.js-accordion-content').attr('aria-hidden', 'true');
 
     // クリックで開閉
     $('.js-accordion-title').on('click', function () {

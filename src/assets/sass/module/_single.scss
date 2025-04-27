@@ -20,6 +20,7 @@
     }
 }
 
+.single__img,
 .single__content img,
 .single__content p,
 .single__content ul {
@@ -30,6 +31,7 @@
     }
 }
 
+.single__img img,
 .single__content img {
     aspect-ratio: 345/231;
     object-fit: cover;

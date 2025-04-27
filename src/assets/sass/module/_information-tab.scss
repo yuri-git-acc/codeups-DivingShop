@@ -18,6 +18,7 @@
         flex: unset;
         font-size: rem(24);
         box-shadow: unset;
+        transition: 0.3s;
     }
 }
 
@@ -51,6 +52,7 @@
         background-color: $main;
         display: inline-block;
         aspect-ratio: 1/1;
+        transition: 0.3s;
     }
 }
 
@@ -72,5 +74,17 @@
     @include mq("md") {
         -webkit-mask-image: url(../images/common/fish.svg);
         mask-image: url(../images/common/fish.svg);
+    }
+}
+
+@media (any-hover: hover) {
+    .information-tab__title:hover {
+        background-color: $main;
+        color: $white;
+        box-shadow: 4px 4px 8px 0 rgba($color: $black, $alpha: 0.25);
+    }
+
+    .information-tab__title:hover::before {
+        background-color: $white;
     }
 }

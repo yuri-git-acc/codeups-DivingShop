@@ -40,13 +40,12 @@
 
 
 .accordion__header::after {
-    rotate: 90deg;
-    transform: translateX(rem(-1));
+    transform: translate(rem(-1), rem(-1)) rotate(0);
     transition: all 0.3s;
 }
 
 .is-close.accordion__header::after {
-    transform: translate(rem(-1), rem(-1)) rotate(90deg);
+    transform: translate(0, rem(-1)) rotate(90deg);
 }
 
 .accordion__content {

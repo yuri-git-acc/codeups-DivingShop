@@ -1,4 +1,4 @@
-@use "global" as *;
+@use "global"as *;
 
 .header {
     position: fixed;
@@ -7,12 +7,14 @@
     right: 0;
     height: rem(80);
     background-color: rgba($color: #0D2936, $alpha: 0.68);
-    z-index: 999;
+    z-index: 99;
     transition: background-color 0.3s;
-    @include mq("md"){
+
+    @include mq("md") {
         height: rem(90);
     }
 }
+
 .header.js-open {
     background-color: $main;
 }
@@ -23,7 +25,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include mq("md"){
+
+    @include mq("md") {
         padding-left: rem(40);
         padding-right: rem(26);
     }
@@ -32,7 +35,8 @@
 .header__logo {
     width: rem(102);
     z-index: 9999;
-    @include mq("md"){
+
+    @include mq("md") {
         width: rem(133);
     }
 }
@@ -41,7 +45,8 @@
     aspect-ratio: 102 / 38;
     object-fit: cover;
     height: auto;
-    @include mq("md"){
+
+    @include mq("md") {
         aspect-ratio: 133 / 50;
     }
 }
@@ -53,13 +58,14 @@
 .header__nav {
     height: inherit;
     display: none;
-    @include mq("md"){
+
+    @include mq("md") {
         display: block;
     }
 }
 
 .header__list {
-    @include mq("md"){
+    @include mq("md") {
         height: inherit;
         display: flex;
         align-items: center;
@@ -77,8 +83,8 @@
     color: $white;
     text-align: center;
     padding-inline: rem(15);
-    display:grid;
-    place-content:center;
+    display: grid;
+    place-content: center;
     position: relative;
 }
 
@@ -98,6 +104,7 @@
     transition: transform .3s;
     margin-inline: rem(15);
 }
+
 @media (hover:hover) {
     .header__link:hover::after {
         transform: scaleX(1);
@@ -122,14 +129,16 @@
     height: inherit;
     display: flex;
     align-items: center;
-        @include mq("md"){
+
+    @include mq("md") {
         display: none;
     }
 }
 
 .header__sp-nav {
     padding-inline: rem(13);
-    @include mq("md"){
+
+    @include mq("md") {
         display: none;
     }
 }

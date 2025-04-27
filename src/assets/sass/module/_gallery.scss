@@ -25,12 +25,8 @@
 
     @include mq("md") {
         grid-template-columns: calc((492 / 1080) * 100%) calc((80 / 1080) * 100%) calc((492 / 1080) * 100%);
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas:
-            "area1 area2 area2"
-            "area1 area3 area3"
-            "area4 area4 area6"
-            "area5 area5 area6";
+        grid-template-rows: 1fr;
+        grid-auto-flow: dense;
         margin-top: rem(79);
     }
 }
@@ -44,8 +40,8 @@
     height: auto;
 }
 
-.gallery__img--1 img,
-.gallery__img--6 img {
+.gallery__img:nth-of-type(6n+1) img,
+.gallery__img:nth-of-type(6n) img {
     aspect-ratio: 345/523;
 
     @include mq("md") {
@@ -53,10 +49,10 @@
     }
 }
 
-.gallery__img--2 img,
-.gallery__img--3 img,
-.gallery__img--4 img,
-.gallery__img--5 img {
+.gallery__img:nth-of-type(6n+2) img,
+.gallery__img:nth-of-type(6n+3) img,
+.gallery__img:nth-of-type(6n+4) img,
+.gallery__img:nth-of-type(6n+5) img {
     aspect-ratio: 345/219;
 
     @include mq("md") {
@@ -64,44 +60,22 @@
     }
 }
 
-.gallery__img--1 {
+.gallery__img:nth-of-type(6n+1),
+.gallery__img:nth-of-type(6n) {
     @include mq("md") {
-        grid-area: area1;
+        grid-column: span 1;
+        grid-row: span 2;
     }
 }
 
-.gallery__img--2 {
+.gallery__img:nth-of-type(6n+2),
+.gallery__img:nth-of-type(6n+3),
+.gallery__img:nth-of-type(6n+4),
+.gallery__img:nth-of-type(6n+5) {
     @include mq("md") {
-        grid-area: area2;
+        grid-column: span 2;
+        grid-row: span 1;
     }
-}
-
-.gallery__img--3 {
-    @include mq("md") {
-        grid-area: area3;
-    }
-
-}
-
-.gallery__img--4 {
-    @include mq("md") {
-        grid-area: area4;
-    }
-
-}
-
-.gallery__img--5 {
-    @include mq("md") {
-        grid-area: area5;
-    }
-
-}
-
-.gallery__img--6 {
-    @include mq("md") {
-        grid-area: area6;
-    }
-
 }
 
 .gallery__modal {
