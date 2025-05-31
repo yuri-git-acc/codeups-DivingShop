@@ -1,0 +1,13 @@
+@use "global"as *;
+
+.top-information {
+    background-color: $bg;
+}
+
+.top-information__article {
+    margin-top: rem(28);
+
+    @include mq("md") {
+        margin-top: rem(39);
+    }
+}

@@ -1,0 +1,122 @@
+@use "global"as *;
+
+.gallery {
+    position: relative;
+}
+
+.gallery::after {
+    @include mq("md") {
+        position: absolute;
+        content: '';
+        display: block;
+        background: url(../images/common/fish_green_pic.webp) center center /contain no-repeat;
+        width: rem(301);
+        height: rem(138);
+        right: calc(50% - min(50% - ((20 / (1440 / 2)) * 50%), rem((1440 / 2) - 80)));
+        top: rem(-75);
+    }
+}
+
+.gallery__wrap {
+    margin-top: rem(40);
+
+    @include mq("md") {
+        margin-top: rem(79);
+    }
+}
+
+.gallery__contents {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(8);
+
+    @include mq("md") {
+        grid-template-columns: calc((492 / 1080) * 100%) calc((80 / 1080) * 100%) calc((492 / 1080) * 100%);
+        grid-template-rows: 1fr;
+        grid-auto-flow: dense;
+    }
+}
+
+.gallery__contents+.gallery__contents {
+    margin-top: rem(8);
+}
+
+.gallery__img {
+    cursor: pointer;
+}
+
+.gallery__img img {
+    object-fit: cover;
+    height: auto;
+}
+
+.gallery__img:nth-of-type(6n+1) img,
+.gallery__img:nth-of-type(6n) img {
+    aspect-ratio: 345/523;
+
+    @include mq("md") {
+        aspect-ratio: 492/746;
+    }
+}
+
+.gallery__img:nth-of-type(6n+2) img,
+.gallery__img:nth-of-type(6n+3) img,
+.gallery__img:nth-of-type(6n+4) img,
+.gallery__img:nth-of-type(6n+5) img {
+    aspect-ratio: 345/219;
+
+    @include mq("md") {
+        aspect-ratio: 580/369;
+    }
+}
+
+.gallery__img:nth-of-type(6n+1),
+.gallery__img:nth-of-type(6n) {
+    @include mq("md") {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+}
+
+.gallery__img:nth-of-type(6n+2),
+.gallery__img:nth-of-type(6n+3),
+.gallery__img:nth-of-type(6n+4),
+.gallery__img:nth-of-type(6n+5) {
+    @include mq("md") {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+}
+
+.gallery__modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(#202020, 0.8);
+    /* 背景色 */
+    opacity: 0;
+    /* 初期状態では透明 */
+    visibility: hidden;
+    /* 初期状態では不可視 */
+    transition: opacity 0.5s, visibility 0.5s;
+    /* アニメーション効果 */
+}
+
+.gallery__modal-content {
+    height: 100svh;
+    display: grid;
+    place-content: center;
+    padding-top: rem(90);
+}
+
+.gallery__modal-img {
+    max-width: rem(920);
+    max-height: 75svh;
+}

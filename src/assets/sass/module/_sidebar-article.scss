@@ -1,0 +1,33 @@
+@use "global"as *;
+
+
+
+.sidebar-article {
+    box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 0.25);
+    padding: rem(16);
+    display: grid;
+    grid-template-columns: calc((121 / 262) * 100%) auto;
+    gap: rem(16);
+}
+
+.sidebar-article__img img {
+    aspect-ratio: 121/90;
+    object-fit: cover;
+    height: auto;
+}
+
+.sidebar-article__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-article__time {
+    font-family: $second-font-family;
+    font-size: rem(12);
+    font-weight: $regular;
+}
+
+.sidebar-article__title {
+    margin-top: rem(3);
+    font-weight: $medium;
+}

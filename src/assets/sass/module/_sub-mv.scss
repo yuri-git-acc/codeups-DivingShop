@@ -1,0 +1,97 @@
+@use "global"as *;
+
+.sub-mv__bg {
+    width: 100%;
+    height: rem(460);
+    display: grid;
+    place-content: center;
+
+    @include mq("md") {
+        height: rem(548);
+    }
+}
+
+.sub-mv__bg--campaign {
+    background: url(../images/campaign/campaign_sp_fv.webp) center center / cover no-repeat;
+
+    @include mq("md") {
+        background-image: url(../images/campaign/campaign_pc_fv.webp);
+    }
+}
+
+.sub-mv__bg--aboutus {
+    background: url(../images/aboutus/aboutus_sp_fv.webp) center center / cover no-repeat;
+
+    @include mq("md") {
+        background-image: url(../images/aboutus/aboutus_pc_fv.webp);
+    }
+}
+
+.sub-mv__bg--information {
+    background: url(../images/information/information_sp_fv.webp) center center / cover no-repeat;
+
+    @include mq("md") {
+        background-image: url(../images/information/information_pc_fv.webp);
+    }
+}
+
+.sub-mv__bg--blog {
+    background: url(../images/blog/blog_sp_fv.webp) center center / cover no-repeat;
+
+    @include mq("md") {
+        background-image: url(../images/blog/blog_pc_fv.webp);
+    }
+}
+
+.sub-mv__bg--voice {
+    background: url(../images/voice/voice_sp_fv.webp) center center / cover no-repeat;
+
+    @include mq("md") {
+        background-image: url(../images/voice/voice_pc_fv.webp);
+    }
+}
+
+.sub-mv__bg--price {
+    background: url(../images/price/price_sp_fv.webp) center center / cover no-repeat;
+
+    @include mq("md") {
+        background-image: url(../images/price/price_pc_fv.webp);
+    }
+}
+
+.sub-mv__bg--faq {
+    background: url(../images/faq/faq_sp_fv.webp) center center / cover no-repeat;
+
+    @include mq("md") {
+        background-image: url(../images/faq/faq_pc_fv.webp);
+    }
+}
+
+.sub-mv__bg--contact {
+    background: url(../images/contact/contact_sp_fv.webp) center center / cover no-repeat;
+
+    @include mq("md") {
+        background-image: url(../images/contact/contact_pc_fv.webp);
+    }
+}
+
+.sub-mv__bg--map {
+    background: url(../images/map/map_sp_fv.webp) center center / cover no-repeat;
+
+    @include mq("md") {
+        background-image: url(../images/map/map_pc_fv.webp);
+    }
+}
+
+.sub-mv__title {
+    font-family: $third-font-family;
+    font-size: rem(40);
+    font-weight: $normal;
+    color: $white;
+
+    @include mq("md") {
+        margin-top: rem(100);
+        font-size: rem(80);
+        line-height: calc(100 / 80);
+    }
+}

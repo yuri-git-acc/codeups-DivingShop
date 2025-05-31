@@ -1,0 +1,6 @@
+@use "global"as *;
+
+.accordion-list {
+    display: grid;
+    gap: rem(40);
+}

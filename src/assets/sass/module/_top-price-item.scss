@@ -1,0 +1,43 @@
+@use "global"as *;
+
+
+.top-price-item__title {
+    font-weight: $bold;
+    line-height: calc(24 / 16);
+    border-bottom: 1px solid $main;
+    padding-bottom: rem(4);
+}
+
+.top-price-item__list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.top-price-item__row {
+    display: grid;
+    grid-template-columns: auto rem(70);
+    gap: rem(10);
+    justify-content: space-between;
+    margin-top: rem(6);
+}
+
+.top-price-item__head,
+.top-price-item__date {
+    font-size: rem(14);
+    line-height: calc(24 / 14);
+    font-weight: $normal;
+
+    @include mq("md") {
+        font-size: rem(16);
+        line-height: calc(24 / 16);
+    }
+}
+
+.top-price-item__head {
+    margin-right: auto;
+    text-align: left;
+}
+
+.top-price-item__date {
+    margin-left: auto;
+}

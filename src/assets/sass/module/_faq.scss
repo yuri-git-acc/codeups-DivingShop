@@ -1,0 +1,8 @@
+@use "global"as *;
+
+.faq__accordion-list {
+    @include mq("md") {
+        max-width: rem(700);
+        margin-inline: auto;
+    }
+}

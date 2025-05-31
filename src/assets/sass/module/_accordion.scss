@@ -1,0 +1,63 @@
+@use "global"as *;
+
+.accordion__header {
+    background-color: $main;
+    padding: rem(15) rem(60) rem(16) rem(16);
+    text-align-last: left;
+    position: relative;
+    width: 100%;
+    color: $white;
+    font-weight: $normal;
+    font-size: rem(16);
+
+    @include mq("md") {
+        padding: rem(25) rem(100) rem(25) rem(40);
+        font-size: rem(20);
+    }
+}
+
+.accordion__header:focus-visible {
+    outline: 3px solid $font;
+    outline-offset: -3px;
+}
+
+.accordion__header::before,
+.accordion__header::after {
+    position: absolute;
+    content: '';
+    width: rem(28);
+    height: rem(1);
+    right: rem(16);
+    top: 50%;
+    transform: translateY(rem(-1));
+    background-color: $white;
+    display: inline-block;
+
+    @include mq("md") {
+        right: rem(40);
+    }
+}
+
+
+.accordion__header::after {
+    transform: translate(rem(-1), rem(-1)) rotate(0);
+    transition: all 0.3s;
+}
+
+.is-close.accordion__header::after {
+    transform: translate(0, rem(-1)) rotate(90deg);
+}
+
+.accordion__content {
+    padding: rem(23) rem(16) rem(23) rem(15);
+    border: 1px solid $main;
+
+    @include mq("md") {
+        padding: rem(39) rem(40);
+        margin-top: rem(16);
+    }
+}
+
+.accordion__text {
+    line-height: calc(23 / 16);
+}

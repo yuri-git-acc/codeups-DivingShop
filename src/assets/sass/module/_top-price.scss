@@ -1,0 +1,65 @@
+@use "global"as *;
+
+.top-price {
+    background-color: $bg;
+    position: relative;
+}
+
+.top-price::after {
+    @include mq("md") {
+        position: absolute;
+        content: '';
+        width: rem(437);
+        height: rem(201);
+        bottom: rem(60);
+        left: calc(50% - min(50% - ((20 / (1440 / 2)) * 50%), rem((1440 / 2) - 100)));
+        background: url(../images/common/fish_green_pic.webp) left top /contain no-repeat;
+    }
+}
+
+.top-price__contents {
+    margin-top: rem(28);
+
+    @include mq("md") {
+        margin-top: rem(39);
+        display: grid;
+        grid-template-columns: rem(494) rem(492);
+        grid-template-columns: calc((494 / 1080) * 100%) calc((492 / 1080) * 100%);
+        grid-template-areas: "price bg";
+        gap: calc((92 / 1080) * 100%);
+    }
+}
+
+.top-price__img {
+    width: 100%;
+    height: auto;
+}
+
+.top-price__img img {
+    aspect-ratio: 345 / 227;
+    object-fit: cover;
+    height: auto;
+
+    @include mq("md") {
+        aspect-ratio: 492 / 746;
+    }
+}
+
+.top-price__list {
+    margin-top: rem(40);
+
+    @include mq("md") {
+        grid-area: price;
+        margin-top: unset;
+        padding-bottom: calc((93 / 1080) * 100%);
+    }
+}
+
+.top-price__btn {
+    margin-top: rem(39);
+    text-align: center;
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}

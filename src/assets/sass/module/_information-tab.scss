@@ -1,0 +1,90 @@
+@use "global"as *;
+
+.information-tab__title {
+    background-color: $bg;
+    padding: rem(9) rem(13);
+    color: $main;
+    font-size: rem(14);
+    text-align: center;
+    width: 100%;
+    box-shadow: 2px 2px 4px 0 rgba($color: $black, $alpha: 0.25);
+
+    @include mq("md") {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(8);
+        padding: rem(13) rem(5);
+        flex: unset;
+        font-size: rem(24);
+        box-shadow: unset;
+        transition: 0.3s;
+    }
+}
+
+.current .information-tab__title {
+    background-color: $main;
+    color: $white;
+
+    @include mq("md") {
+        box-shadow: 4px 4px 8px 0 rgba($color: $black, $alpha: 0.25);
+    }
+}
+
+.current .information-tab__title::before {
+    @include mq("md") {
+        background-color: $white;
+    }
+}
+
+.information-tab__title::before {
+    @include mq("md") {
+        content: '';
+        display: block;
+        width: rem(64);
+        height: rem(64);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: $main;
+        display: inline-block;
+        aspect-ratio: 1/1;
+        transition: 0.3s;
+    }
+}
+
+.information-tab__title--1::before {
+    @include mq("md") {
+        -webkit-mask-image: url(../images/common/whale.svg);
+        mask-image: url(../images/common/whale.svg);
+    }
+}
+
+.information-tab__title--2::before {
+    @include mq("md") {
+        -webkit-mask-image: url(../images/common/shark.svg);
+        mask-image: url(../images/common/shark.svg);
+    }
+}
+
+.information-tab__title--3::before {
+    @include mq("md") {
+        -webkit-mask-image: url(../images/common/fish.svg);
+        mask-image: url(../images/common/fish.svg);
+    }
+}
+
+@media (any-hover: hover) {
+    .information-tab__title:hover {
+        background-color: $main;
+        color: $white;
+        box-shadow: 4px 4px 8px 0 rgba($color: $black, $alpha: 0.25);
+    }
+
+    .information-tab__title:hover::before {
+        background-color: $white;
+    }
+}

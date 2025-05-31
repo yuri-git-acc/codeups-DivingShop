@@ -1,0 +1,86 @@
+@use "global"as *;
+
+.aboutus__contents {
+    position: relative;
+}
+
+.aboutus__img {
+    position: relative;
+}
+
+.aboutus__img-item img {
+    object-fit: cover;
+    height: auto;
+}
+
+.aboutus__img-item--1 {
+    @include mq("md") {
+        position: absolute;
+        top: calc((80 / 661) * 100%);
+        left: calc((200 / 1080) * 100%);
+        z-index: -1;
+    }
+}
+
+.aboutus__img-item--1 img {
+    aspect-ratio: 345/228;
+
+    @include mq("md") {
+        aspect-ratio: 880/581;
+    }
+}
+
+.aboutus__img-item--2 {
+    display: none;
+
+    @include mq("md") {
+        display: block;
+        width: calc((400 / 1080) * 100%);
+        padding-bottom: calc((55 / 1080)* 100%);
+    }
+}
+
+.aboutus__img-item--2 img {
+    aspect-ratio: 400/606;
+}
+
+.aboutus__text-box {
+    display: contents;
+
+    @include mq("md") {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        padding-right: rem(40);
+        gap: rem(41);
+        position: absolute;
+        top: calc((200 / 659) * 100%);
+        left: calc((199 / 1080) * 100%);
+    }
+}
+
+.aboutus__title {
+    font-family: $second-font-family;
+    font-size: rem(40);
+    font-weight: $normal;
+    line-height: 1;
+    color: $white;
+    position: absolute;
+    top: rem(24);
+    left: rem(24);
+
+    @include mq("md") {
+        font-size: rem(80);
+        line-height: calc(100 / 80);
+        position: static;
+    }
+}
+
+.aboutus__text {
+    line-height: calc(24 / 16);
+    margin-top: rem(40);
+
+    @include mq("md") {
+        color: $white;
+        margin-top: rem(24);
+    }
+}

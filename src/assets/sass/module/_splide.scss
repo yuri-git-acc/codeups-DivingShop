@@ -1,0 +1,31 @@
+@use "global"as *;
+
+// mv
+.mv__splide .splide__slide {
+    height: 100vh;
+    height: 100svh;
+}
+
+.mv__splide .splide__slide img {
+    aspect-ratio: 375 / 667;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: bottom;
+
+    @include mq("md") {
+        aspect-ratio: 1440 / 768;
+    }
+}
+
+// campaign
+.top-campaign__list {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.splide__arrows {
+    position: absolute;
+    top: rem(111);
+    left: calc(50% + ((300 / 1440)* 100vw));
+}

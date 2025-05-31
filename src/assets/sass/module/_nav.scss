@@ -1,0 +1,158 @@
+@use "global"as *;
+
+.nav--header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $main;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    margin-top: rem(80);
+    padding-top: rem(14);
+    padding-bottom: rem(110);
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    overflow-y: auto;
+}
+
+.nav__wrap {
+    display: grid;
+    grid-template-areas:
+        "menu1 menu3"
+        "menu2 menu4";
+    grid-template-columns: repeat(2, rem(171));
+    grid-template-rows: repeat(2, auto);
+    column-gap: rem(7);
+    justify-content: center;
+
+    @include mq("md") {
+        grid-template-areas: unset;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: unset;
+        justify-content: start;
+        column-gap: calc((113.5 / 1080) * 100%);
+    }
+}
+
+.nav__wrap--map {
+    grid-template-columns: unset;
+    justify-content: space-between;
+
+    @include mq("md") {
+        justify-content: space-between;
+    }
+}
+
+.nav__items:nth-child(2n) {
+    margin-top: rem(20);
+
+    @include mq("md") {
+        margin-top: unset;
+    }
+}
+
+// spのヘッダーメニューの時の位置
+.header__sp-nav .nav__items:nth-child(3),
+.header__sp-nav .nav__items:nth-child(4) {
+    margin-left: rem(-5);
+}
+
+// footerの時の位置
+.footer__nav .nav__items:nth-child(3),
+.footer__nav .nav__items:nth-child(4) {
+    margin-left: rem(6);
+}
+
+.nav__items--1 {
+    grid-area: menu1;
+
+    @include mq("md") {
+        grid-area: unset;
+    }
+}
+
+.nav__items--2 {
+    grid-area: menu2;
+
+    @include mq("md") {
+        grid-area: unset;
+    }
+}
+
+.nav__items--3 {
+    grid-area: menu3;
+
+    @include mq("md") {
+        grid-area: unset;
+    }
+}
+
+.nav__items--4 {
+    grid-area: menu4;
+
+    @include mq("md") {
+        grid-area: unset;
+    }
+}
+
+.nav__item {
+    display: block;
+    color: $white;
+    line-height: calc(18 / 16);
+    padding-block: rem(10);
+    padding-left: rem(24);
+}
+
+.nav__item--map {
+    color: $font;
+}
+
+.nav__items a:not(:first-child) {
+    display: block;
+    margin-top: rem(4);
+}
+
+.nav__item--icon,
+.nav__item--map-icon {
+    font-weight: $bold;
+    position: relative;
+}
+
+.nav__item--map-icon {
+    color: $font;
+}
+
+.nav__items a:not(:first-child) .nav__item--icon,
+.nav__items a:not(:first-child) .nav__item--map-icon {
+    margin-top: rem(20);
+}
+
+.nav__item--icon::before,
+.nav__item--map-icon::before {
+    content: "";
+    position: absolute;
+    background: url(../images/common/hitode.svg) center center /contain no-repeat;
+    width: rem(18);
+    height: rem(18);
+    top: rem(10);
+    left: rem(2);
+}
+
+.nav__item--map-icon::before {
+    -webkit-mask-image: url(../images/common/hitode.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url(../images/common/hitode.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $font;
+
+}
+
+// humburgerメニューopen時
+.js-open.nav {
+    transform: translateX(0);
+}

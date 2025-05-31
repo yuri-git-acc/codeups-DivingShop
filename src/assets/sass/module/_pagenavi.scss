@@ -1,0 +1,107 @@
+@use "global"as *;
+
+.wp-pagenavi {
+    clear: both;
+    display: flex;
+    max-width: rem(344);
+    margin-inline: auto;
+    justify-content: center;
+
+    @include mq("md") {
+        max-width: rem(444);
+    }
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+    font-family: $third-font-family;
+    font-weight: $bold;
+    color: $main;
+    border: 1px solid $main;
+    width: rem(38);
+    height: rem(38);
+    white-space: nowrap;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wp-pagenavi .current,
+.wp-pagenavi .pagenavi__number {
+    margin: 0 rem(6);
+}
+
+.pagenavi__number:nth-of-type(n+4) {
+    display: none;
+
+    @include mq("md") {
+        display: flex;
+    }
+}
+
+.wp-pagenavi a:hover {
+    color: $white;
+    background-color: $main;
+    opacity: 1;
+}
+
+.wp-pagenavi span.current {
+    color: $white;
+    background-color: $main;
+}
+
+.wp-pagenavi .pagenavi__prev {
+    margin-right: rem(40);
+}
+
+.wp-pagenavi .pagenavi__next {
+    margin-left: rem(40);
+}
+
+.wp-pagenavi .pagenavi__prev,
+.wp-pagenavi .pagenavi__next {
+    position: relative;
+    width: rem(38);
+    height: rem(38);
+    display: inline-block;
+}
+
+.pagenavi__prev::before,
+.pagenavi__next::before {
+    position: absolute;
+    content: '';
+    width: rem(12);
+    height: rem(12);
+    top: 50%;
+    left: 50%;
+    border-top: 1px solid $main;
+    border-left: 1px solid $main;
+    transition: all 0.3s;
+}
+
+.pagenavi__prev::before {
+    transform: rotate(-45deg) translate(15%, -50%);
+}
+
+.pagenavi__next::before {
+    transform: rotate(137deg) translate(30%, 90%);
+}
+
+.pagenavi__prev:hover::before,
+.pagenavi__next:hover::before {
+    border-color: $white;
+}
+
+.pagenavi__number--pc {
+    display: none;
+
+    @include mq("md") {
+        display: grid;
+    }
+}

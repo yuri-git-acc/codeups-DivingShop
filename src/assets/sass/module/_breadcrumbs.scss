@@ -1,0 +1,28 @@
+@use "global"as *;
+
+.breadcrumb__item {
+  font-size: rem(14);
+  display: flex;
+  gap: rem(7);
+}
+
+.breadcrumbs__item--white {
+  color: $white;
+  z-index: 5;
+  position: relative;
+}
+
+.breadcrumb__separate::before {
+  content: "";
+  width: rem(7);
+  height: rem(7);
+  rotate: 45deg;
+  border-top: 1px solid $font;
+  border-right: 1px solid $font;
+  display: inline-block;
+  transform: translate(-2px, 0px);
+}
+
+.breadcrumb__separate--white::before {
+  border-color: $white;
+}

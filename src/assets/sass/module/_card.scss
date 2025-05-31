@@ -1,0 +1,273 @@
+@use "global"as *;
+
+.card {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    display: grid;
+    padding-bottom: rem(21);
+}
+
+.card--top-campaign {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+    @include mq("md") {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 6;
+        padding-bottom: rem(36);
+    }
+}
+
+.card--campaign {
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+
+    @include mq("md") {
+        box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        grid-template-rows: subgrid;
+        grid-row: span 6;
+        padding-bottom: rem(44);
+    }
+}
+
+.card__img img {
+    aspect-ratio: 280 / 188;
+    object-fit: cover;
+    height: auto;
+}
+
+.card__img--top img {
+    @include mq("md") {
+        aspect-ratio: 333 / 223;
+    }
+}
+
+.card__img--campaign img {
+    @include mq("md") {
+        aspect-ratio: 520 / 347;
+    }
+}
+
+.card__img--blog img {
+    aspect-ratio: 294/188;
+}
+
+.card__main {
+    padding-inline: rem(16);
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+}
+
+.card__main--top {
+    padding-top: rem(16);
+
+    @include mq("md") {
+        padding-top: rem(24);
+        padding-inline: rem(16);
+    }
+}
+
+.card__main--campaign {
+    padding-top: rem(17);
+
+    @include mq("md") {
+        padding-top: rem(25);
+        padding-inline: rem(24);
+    }
+}
+
+.card__main--blog {
+    padding-inline: rem(23);
+    margin-top: rem(15);
+
+    @include mq("md") {
+        margin-top: rem(16);
+    }
+}
+
+.card__tag-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(10);
+}
+
+.card__tag {
+    font-size: rem(12);
+    line-height: calc(22 / 12);
+    color: $main;
+    border: 1px solid $main;
+    padding: rem(3) rem(11);
+    display: inline-block;
+    display: flex;
+    align-self: start;
+    width: fit-content;
+
+    @include mq("md") {
+        padding: rem(5) rem(15);
+    }
+}
+
+
+.card__title {
+    font-weight: 500;
+    line-height: calc(24 / 16);
+    border-bottom: 1px solid $main;
+    margin-top: rem(4);
+    padding-bottom: rem(7);
+}
+
+.card__title--campaign {
+    @include mq("md") {
+        font-size: rem(24);
+        padding-bottom: rem(2);
+    }
+}
+
+.card__title--blog {
+    text-align: center;
+    margin-top: unset;
+    padding-bottom: rem(7);
+}
+
+.card__text {
+    font-size: rem(14);
+    line-height: calc(24 / 14);
+    margin-top: rem(8);
+    text-align: center;
+
+    @include mq("md") {
+        font-size: rem(16);
+    }
+}
+
+.card__text--top {
+    @include mq("md") {
+        margin-top: rem(15);
+        padding-right: rem(16);
+    }
+}
+
+.card__text--campaign {
+    @include mq("md") {
+        margin-top: rem(22);
+    }
+}
+
+.card__text--blog {
+    @include mq("md") {
+        font-size: rem(14);
+    }
+}
+
+.card__price {
+    margin-top: rem(8);
+    display: flex;
+    gap: rem(19);
+    justify-content: center;
+    align-items: baseline;
+    font-family: $third-font-family;
+
+    @include mq("md") {
+        margin-top: rem(6);
+    }
+}
+
+.card__price--top {
+    @include mq("md") {
+        gap: rem(25);
+    }
+}
+
+.card__price--campaign {
+    @include mq("md") {
+        gap: rem(42);
+    }
+}
+
+.card__price--blog {
+    @include mq("md") {
+        margin-top: rem(8);
+    }
+}
+
+.card__price-origin {
+    font-size: rem(20);
+    font-weight: $bold;
+    position: relative;
+}
+
+.card__price-origin--top {
+    @include mq("md") {
+        font-size: rem(24);
+    }
+}
+
+.card__price-origin::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: rem(3);
+    background-color: #C94800;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.card__price-sale {
+    font-size: rem(32);
+    font-weight: $bold;
+    line-height: 1;
+    color: $main;
+}
+
+.card__price-sale--top {
+    @include mq("md") {
+        font-size: rem(40);
+    }
+}
+
+.card__pc {
+    margin-top: rem(24);
+    display: none;
+    padding-inline: rem(16);
+
+    @include mq("md") {
+        margin-top: rem(20);
+        padding-inline: rem(24);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.card__under-text {
+    line-height: calc(24 / 16);
+    white-space: pre-line;
+}
+
+.card__box {
+    margin-top: rem(32);
+    text-align: center;
+}
+
+.card__date {
+    line-height: calc(18 / 16);
+    color: $main;
+    font-weight: $bold;
+    font-family: $third-font-family;
+}
+
+.card__guidance {
+    font-size: rem(14);
+    line-height: calc(18 / 14);
+    color: $main;
+    margin-top: rem(9);
+
+    @include mq("md") {
+        margin-top: rem(7);
+    }
+}
+
+.card__btn {
+    margin-top: rem(16);
+}

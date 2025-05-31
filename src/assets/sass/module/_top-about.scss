@@ -1,0 +1,128 @@
+@use "global"as *;
+
+.top-about {
+    position: relative;
+}
+
+.top-about__contents {
+    margin-top: rem(28);
+
+    @include mq("md") {
+        margin-top: rem(39);
+        position: relative;
+    }
+}
+
+.top-about__img {
+    position: relative;
+}
+
+.top-about__img-item img {
+    object-fit: cover;
+    height: auto;
+}
+
+.top-about__img-item--1 {
+    position: absolute;
+    top: calc((26 / 212) * 100%);
+    left: calc((64 / 345) * 100%);
+    z-index: -1;
+
+    @include mq("md") {
+        top: calc((80 / 663) * 100%);
+        left: calc((200 / 1080) * 100%);
+    }
+}
+
+.top-about__img-item--1 img {
+    aspect-ratio: 281/186;
+
+    @include mq("md") {
+        aspect-ratio: 880/581;
+    }
+}
+
+.top-about__img-item--2 {
+    width: calc((128 / 345) * 100%);
+    padding-bottom: calc((18 / 345)* 100%);
+
+    @include mq("md") {
+        width: calc((400 / 1080) * 100%);
+    }
+}
+
+.top-about__img-item--2 img {
+    aspect-ratio: 128/194;
+
+    @include mq("md") {
+        aspect-ratio: 400/606;
+    }
+}
+
+.top-about::after {
+    @include mq("md") {
+        position: absolute;
+        content: '';
+        width: rem(194);
+        height: rem(181);
+        right: calc(50% - min(50% - ((20 / (1080 / 2)) * 50%), rem((1080 / 2) + 97)));
+        bottom: rem(-88);
+        background: url(../images/common/aboutus_pic.webp) right bottom /contain no-repeat;
+    }
+}
+
+.top-about__main {
+    margin-top: rem(40);
+
+    @include mq("md") {
+        margin-top: unset;
+        position: absolute;
+        top: calc((200 / 661) * 100%);
+        left: calc((199 / 1080) * 100%);
+        padding-right: rem(40);
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: rem(40);
+        justify-content: center;
+    }
+}
+
+.top-about__title {
+    font-family: $second-font-family;
+    font-size: rem(40);
+    line-height: 1;
+    color: $main;
+
+    @include mq("md") {
+        color: $white;
+        font-size: rem(80);
+        line-height: calc(100 / 80);
+        margin-top: unset;
+    }
+}
+
+.top-about__other {
+    margin-top: rem(16);
+
+    @include mq("md") {
+        margin-top: unset;
+    }
+}
+
+.top-about__text {
+    line-height: calc(24 / 16);
+    white-space: pre-line;
+
+    @include mq("md") {
+        color: $white;
+    }
+}
+
+.top-about__btn {
+    margin-top: rem(50);
+    text-align: center;
+
+    @include mq("md") {
+        margin-top: rem(39);
+    }
+}

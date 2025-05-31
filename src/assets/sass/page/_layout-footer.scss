@@ -1,0 +1,37 @@
+@use "global"as *;
+
+.layout-footer {
+    margin-top: rem(104);
+    padding-top: rem(48);
+    padding-bottom: rem(56);
+
+    @include mq("md") {
+        margin-top: rem(159);
+        padding-top: rem(80);
+        padding-bottom: rem(80);
+    }
+}
+
+.layout-footer--contact {
+    margin-top: rem(148);
+
+    @include mq("md") {
+        margin-top: rem(164);
+    }
+}
+
+.layout-footer--completed {
+    margin-top: rem(168);
+
+    @include mq("md") {
+        margin-top: rem(120);
+    }
+}
+
+.layout-footer--not-404 {
+    margin-top: unset;
+
+    @include mq("md") {
+        margin-top: unset;
+    }
+}

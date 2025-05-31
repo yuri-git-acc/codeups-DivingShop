@@ -1,0 +1,68 @@
+@use "global"as *;
+
+.single__time {
+    font-family: $second-font-family;
+    font-size: rem(14);
+    display: block;
+    line-height: 1;
+}
+
+.single__title {
+    font-size: rem(24);
+    font-weight: $medium;
+    border-bottom: 1px solid $main;
+    padding-bottom: rem(2);
+    margin-top: rem(10);
+
+    @include mq("md") {
+        font-size: rem(32);
+        padding-bottom: unset;
+    }
+}
+
+.single__img,
+.single__content img,
+.single__content p,
+.single__content ul {
+    margin-top: rem(24);
+
+    @include mq("md") {
+        margin-top: rem(39.5);
+    }
+}
+
+.single__img img,
+.single__content img {
+    aspect-ratio: 345/231;
+    object-fit: cover;
+    height: auto;
+
+    @include mq("md") {
+        aspect-ratio: 700/468;
+    }
+}
+
+.single__content p {
+    line-height: calc(24 / 16);
+}
+
+.single__content li {
+    display: flex;
+    gap: rem(9);
+}
+
+.single__content li+li {
+    margin-top: rem(4);
+}
+
+.single__content li::before {
+    position: relative;
+    content: '';
+    width: rem(18);
+    height: rem(18);
+    left: 0;
+    top: rem(3);
+    mask: url(../images/common/hitode.svg) center / contain no-repeat;
+    -webkit-mask: url(../images/common/hitode.svg) center / contain no-repeat;
+    background-color: $main;
+}

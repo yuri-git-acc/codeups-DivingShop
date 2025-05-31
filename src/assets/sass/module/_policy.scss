@@ -1,0 +1,54 @@
+@use "global"as *;
+
+.rule {
+    @include mq("md") {
+        max-width: rem(800);
+        margin-inline: auto;
+    }
+}
+
+.rule h2 {
+    font-size: rem(24);
+    font-weight: $medium;
+
+    @include mq("md") {
+        font-size: rem(32);
+    }
+}
+
+.rule p {
+    line-height: calc(32 / 16);
+    margin-top: rem(38);
+}
+
+.rule ol {
+    counter-reset: number;
+}
+
+.rule ul+ol {
+    margin-top: 0;
+}
+
+.rule ol li {
+    position: relative;
+    padding-left: 1.5em;
+    line-height: calc(32 / 16);
+}
+
+.rule ol li::before {
+    counter-increment: number;
+    content: counter(number) ".";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: rem(5);
+}
+
+.rule ul li {
+    line-height: calc(32 / 16);
+}
+
+.rule__dut::before {
+    content: "・";
+
+}

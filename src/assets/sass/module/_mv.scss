@@ -1,0 +1,127 @@
+@use "global" as *;
+
+.mv {
+    position: relative;
+}
+
+.mv__loading {
+    width:  100%;
+    height: 100vh;
+    height: 100svh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mv__double {
+    position: relative;
+    width:  100%;
+    height: inherit;
+    overflow: hidden;
+}
+
+.mv__left,
+.mv__right {
+    height: 100vh;
+    height: 100svh;
+    z-index: 10;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:  100%;
+}
+.active .mv__left,
+.active .mv__right {
+    opacity: 1;
+}
+
+.active .mv__left {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    animation: slideinBottomL 1.5s 1.5s forwards ease;
+    // slideinBottomL/アニメーション時間/開始遅延/アニメーション終了後、最後のキーフレームで指定されたスタイルを保持/アニメーションの進行速度
+    transform: translateY(100%);
+}
+
+@keyframes slideinBottomL {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.active .mv__right {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    animation: slideinBottomR 1.5s 1.5s forwards ease;
+    transform: translateY(100%);
+}
+@keyframes slideinBottomR {
+    0% {
+        transform: translateY(calc(100% + rem(80)));
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.mv__left img,
+.mv__right img {
+    aspect-ratio: 375 / 667;
+    object-fit: cover;
+    width:  100%;
+    height: 100%;
+    object-position: bottom;
+    @include mq("md"){
+        aspect-ratio: 1440 / 768;
+    }
+}
+
+.mv__copy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50%), calc(-50%));
+    color: $main;
+    text-align: center;
+    font-family: $second-font-family;
+    z-index: 5;
+}
+
+.mv__copy--after {
+    color: $white;
+}
+
+.mv__copy-main {
+    font-size: rem(40);
+    letter-spacing: 0.53em;
+    text-indent: 0.53em;
+    line-height: 1.28;
+    font-family: $third-font-family;
+    font-weight: $normal;
+    @include mq("md"){
+        font-size: rem(80);
+    }
+}
+
+.mv__copy-sub {
+    font-size: rem(20);
+}
+
+.mv__loading-bg {
+    background-color: $white;
+    width:  100%;
+    height: 100vh;
+    height: 100svh;
+    z-index: 1;
+}
+
+.mv__loading-bg--after {
+    z-index: -1;
+}
+
+.mv__splide {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

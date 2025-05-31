@@ -1,0 +1,180 @@
+@use "global"as *;
+
+.campaign-card {
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 6;
+    padding: 0 rem(16) rem(24);
+
+    @include mq("md") {
+        box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.campaign-card__img {
+    margin-inline: rem(-16);
+}
+
+.campaign-card__img img {
+    aspect-ratio: 280 / 188;
+    object-fit: cover;
+    height: auto;
+
+    @include mq("md") {
+        aspect-ratio: 520 / 347;
+    }
+}
+
+.campaign-card__tag {
+    font-size: rem(12);
+    line-height: calc(22 / 12);
+    color: $main;
+    border: 1px solid $main;
+    padding: rem(3) rem(11);
+    display: inline-block;
+    display: flex;
+    align-self: start;
+    margin-top: rem(16);
+    width: fit-content;
+
+    @include mq("md") {
+        padding: rem(5) rem(15);
+    }
+}
+
+.campaign-card__title {
+    font-weight: 500;
+    line-height: calc(24 / 16);
+    border-bottom: 1px solid $main;
+    margin-top: rem(4);
+    padding-bottom: rem(7);
+    display: flex;
+    flex-grow: 1;
+}
+
+.campaign-card__text {
+    font-size: rem(14);
+    line-height: calc(24 / 14);
+    margin-top: rem(8);
+    text-align: center;
+
+    @include mq("md") {
+        font-size: rem(16);
+        margin-top: rem(15);
+        padding-right: rem(16);
+    }
+}
+
+.campaign-card__price {
+    margin-top: rem(8);
+    display: flex;
+    gap: rem(19);
+    justify-content: center;
+    align-items: baseline;
+    font-family: $third-font-family;
+
+    @include mq("md") {
+        gap: rem(25);
+        margin-top: rem(6);
+    }
+}
+
+.campaign-card__price-origin {
+    font-size: rem(20);
+    font-weight: $bold;
+    position: relative;
+
+    @include mq("md") {
+        font-size: rem(24);
+    }
+}
+
+.campaign-card__price-origin::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: rem(3);
+    background-color: #C94800;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.campaign-card__price-sale {
+    font-size: rem(32);
+    font-weight: $bold;
+    line-height: 1;
+    color: $main;
+
+    @include mq("md") {
+        font-size: rem(40);
+    }
+}
+
+.campaign-card__pc {
+    margin-top: rem(24);
+    display: none;
+
+    @include mq("md") {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.campaign-card__under-text {
+    line-height: calc(24 / 16);
+}
+
+.campaign-card__box {
+    margin-top: rem(32);
+    text-align: center;
+}
+
+.campaign-card__date {
+    line-height: calc(18 / 16);
+    color: $main;
+    font-weight: $bold;
+    font-family: $third-font-family;
+}
+
+.campaign-card__guidance {
+    font-size: rem(14);
+    line-height: calc(18 / 14);
+    color: $main;
+    margin-top: rem(7);
+}
+
+.campaign-card__btn {
+    margin-top: rem(16);
+}
+
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(20);
+    /* カード間のスペース */
+}
+
+.campaign__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(20);
+    /* カード間のスペース */
+}
+
+.campaign-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(33.33% - rem(20));
+    /* 3列レイアウト */
+    border: 1px solid #ddd;
+    padding: rem(20);
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+}

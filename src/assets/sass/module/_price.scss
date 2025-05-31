@@ -1,0 +1,8 @@
+@use "global"as *;
+
+.price__inner.inner {
+    @include mq("md") {
+        max-width: rem(750);
+        padding-inline: rem(25);
+    }
+}

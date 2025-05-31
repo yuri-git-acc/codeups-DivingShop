@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.hamburger {
+    height: inherit;
+    width: rem(32);
+    padding-inline: 0;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.hamburger span {
+    display: block;
+    width:  100%;
+    height: rem(1);
+    background-color: $white;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.hamburger span::before,
+.hamburger span::after {
+    content: "";
+    display: block;
+    width:  100%;
+    height: rem(1);
+    position: absolute;
+    left: 0;
+    background-color: $white;
+    transition: all 0.3s;
+}
+
+.hamburger span::before {
+    top: rem(-12);
+}
+.hamburger span::after {
+    top: rem(12);
+}
+
+// humburgerメニューopen時
+.js-open .hamburger span {
+    background-color: transparent;
+    left: rem(-4);
+}
+
+.js-open .hamburger span::before,
+.js-open .hamburger span::after {
+    width: rem(40);
+}
+
+.js-open .hamburger span::before {
+    top: 0;
+    rotate: 37deg;
+}
+
+.js-open .hamburger span::after {
+    top: 0;
+    rotate: -37deg;
+}

@@ -1,0 +1,10 @@
+@use "global"as *;
+
+.map__nav {
+    max-width: rem(345);
+    margin-inline: auto;
+
+    @include mq("md") {
+        max-width: unset;
+    }
+}

@@ -1,0 +1,32 @@
+@use "global"as *;
+
+.sub-page-fish {
+    position: relative;
+}
+
+.sub-page-fish::before {
+    position: absolute;
+    content: '';
+    width: rem(120);
+    height: rem(55);
+    top: rem(-24);
+    left: calc(50% - min(50% - ((((630 / 375) * 15) / (630 / 2)) * 50%), rem((630 / 2) - 15)));
+    background: url(../images/common/fish_green_pic.webp) center center /contain no-repeat;
+    scale: -1 1;
+    z-index: -1;
+
+    @include mq("md") {
+        width: rem(301);
+        height: rem(138);
+        top: rem(-70);
+        left: calc(50% - min(50% - ((20 / (1440 / 2)) * 50%), rem((1440 / 2) - 100)));
+    }
+}
+
+.sub-page-fish--information::before {
+    top: rem(-93);
+}
+
+.sub-page-fish--map::before {
+    top: rem(-14);
+}
